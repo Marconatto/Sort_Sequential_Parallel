@@ -1,15 +1,10 @@
 #!/usr/bin/env bash
 #-----------------------------------------------------#
-
 #  Arquivo:       executa.bash
-
 #  Descricao:     Execução dos codigos do TCC
-#				"Analise de desempenho e maturidade da biblioteca OpenMP"
-
+#				Analise de desempenho e maturidade da biblioteca OpenMP
 #  Autor:         Marco Antonio Marconatto
-
 #  Auxiliar:  http://www.devmedia.com.br/introducao-ao-shell-script-no-linux/25778
-
 #----------------------------------------------------#
 script log_saidas
 	 echo "Iniciando testes!"
