@@ -93,19 +93,19 @@ void retornaAleatorio(int *a, int tam) {
 //programa principal
 
 int main() {
-    int tam = 1000, i, j, flag, m;
+    int tam = 1000, i=0, j=0, flag=0, m=0;
     int *a;
     a = (int*) calloc(tam, sizeof (int));
     retornaAleatorio(a, tam);
     for (int s = 2; s <= tam; s *= 2) {
-            for (int i = 0; i < tam;) {
-                merge_up((a + i), s);
-                printf("blabla %d\n",a+i);
-                merge_down((a + i + s), s);
-                printf("clclclabla %d\n",a+i+s);
-                i += s * 2;
-            }
+        for (int i = 0; i < tam;) {
+            merge_up((a + i), s);
+            //printf("blabla %d\n",a+i);
+            merge_down((a + i + s), s);
+            //printf("clclclabla %d\n",a+i+s);
+            i += s * 2;
         }
+    }
     for (int j = 0; j < tam; j++) {
         printf("%d ,", a[j]);
     }

@@ -1,15 +1,15 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <windows.h>
 #include <omp.h>
 
 void quickSort(int *vetor, int inicio, int fim)
 {
-   int i, j, meio, aux;
+   int i=0, j=0, meio=0, aux=0;
  
    i = inicio;
    j = fim;
-   meio = vetor[(inicio + fim) / 2];
+   #pragma omp parallel private (meio)
+   meio = vetor[(i + j) / 2];
  
    do
    {
@@ -81,27 +81,27 @@ void retornaAleatorio(int *a, int tam){
 
 //programa principal
 int main (){
-	double start, end, tempo;
-	double inicio, fim, tmili;
+	double end=0, tempo=0;
+	double inicio=0;
 	int tam=1000;
 	int *a;
 	a= (int*) calloc(tam, sizeof(int));
 	retornaAleatorio(a, tam);	
 	inicio=omp_get_wtime();
-	start=GetTickCount();
-#pragma omp parallel private (a)
-        {
-            quickSort(a,0,tam-1);
-        }
+	//start=GetTickCount();
+	#pragma omp parallel private (a)
+    {
+        quickSort(a,0,tam-1);
+    }
 	end=omp_get_wtime();
-	fim=GetTickCount();
-	tempo=end-start;
-        tmili = fim - inicio; 
-        for(int j=0; j<tam;j++){
+	//fim=GetTickCount();
+	tempo=end-inicio;
+    //tmili = fim - inicio; 
+    for(int j=0; j<tam;j++){
 		printf("%d ,",a[j]);
 	}
-	printf("\ntempo do contador paralelo\n%f",tempo);
-        printf("tempo decorrido: %d\n", tmili); 
+	printf("\ntempo do contador paralelo%f\n",tempo);
+    //    printf("tempo decorrido: %d\n", tmili); 
 
 return 0;
 }

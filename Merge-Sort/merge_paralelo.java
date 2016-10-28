@@ -1,4 +1,3 @@
-
 import java.util.*;
 
 public class merge_paralelo {
@@ -6,7 +5,7 @@ public class merge_paralelo {
     public static void main(String[] args) {
         long start, end, tempo;
         int tam = 1000;
-        Integer[] a = new Integer[tam];
+        int[] a = new int[tam];
         retornaAleatorio(a, tam);
         start = System.currentTimeMillis();
         // omp parallel
@@ -15,19 +14,19 @@ public class merge_paralelo {
         }
         end = System.currentTimeMillis();
         tempo = (end - start);
-        System.out.print("\n" + tempo + " ms");
-        System.out.println(Arrays.toString(a));
+        System.out.print("\n" + tempo + " ms\n");
+        //System.out.println(Arrays.toString(a));
     }
 
-    public static void mergeSort(Comparable[] a) {
-        Comparable[] tmp = new Comparable[a.length];
+    public static void mergeSort(int[] a) {
+        int[] tmp = new int[a.length];
         // omp single
         {
             mergeSort(a, tmp, 0, a.length - 1);
         }
     }
 
-    private static void mergeSort(Comparable[] a, Comparable[] tmp, int left, int right) {
+    private static void mergeSort(int[] a, int[] tmp, int left, int right) {
         if (left < right) {
             int center = (left + right) / 2;
             // omp task firstprivate (a,tmp,left,center)
@@ -39,34 +38,34 @@ public class merge_paralelo {
         }
     }
 
-    private static void merge(Comparable[] a, Comparable[] tmp, int left, int right, int rightEnd) {
+    private static void merge(int[] a, int[] tmp, int left, int right, int rightEnd) {
         int leftEnd = right - 1;
         int k = left;
         int num = rightEnd - left + 1;
 
         while (left <= leftEnd && right <= rightEnd) {
-            if (a[left].compareTo(a[right]) <= 0) {
+            if (a[left]<=(a[right])) {
                 tmp[k++] = a[left++];
             } else {
                 tmp[k++] = a[right++];
             }
         }
 
-        while (left <= leftEnd) // Copy rest of first half
+        while (left <= leftEnd) 
         {
             tmp[k++] = a[left++];
         }
-        while (right <= rightEnd) // Copy rest of right half
+        while (right <= rightEnd) 
         {
             tmp[k++] = a[right++];
         }
-        // Copy tmp back
+        
         for (int i = 0; i < num; i++, rightEnd--) {
             a[rightEnd] = tmp[rightEnd];
         }
     }
 
-    public static void retornaAleatorio(Comparable a[], int tam) {
+    public static void retornaAleatorio(int a[], int tam) {
         Integer auxvet[] = {629, 486, 29, 610, 80, 247, 100, 493, 497, 590, 657, 307, 611, 77, 823, 532, 615, 727, 675, 407, 748, 111,
             825, 443, 760, 678, 895, 549, 681, 71, 921, 952, 176, 66, 185, 926, 50, 546, 605, 215, 459, 36, 400, 408, 166, 404, 775, 627,
             877, 591, 689, 855, 604, 686, 290, 575, 226, 238, 8, 708, 374, 959, 419, 971, 44, 600, 659, 393, 105, 112, 4, 283, 606, 613, 445,

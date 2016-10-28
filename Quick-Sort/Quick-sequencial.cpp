@@ -1,11 +1,10 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <windows.h>
 
 
 void quickSort(int *vetor, int inicio, int fim)
 {
-   int i, j, meio, aux;
+   int i=0, j=0, meio=0, aux=0;
  
    i = inicio;
    j = fim;
@@ -83,18 +82,18 @@ void retornaAleatorio(int *a, int tam){
 //programa principal
 int main (){
 	int tam=1000;
-        double inicio, fim, tmili;
+    //double inicio, fim, tmili;
 	int *a;
 	a= (int*) calloc(tam, sizeof(int));
 	retornaAleatorio(a, tam);
-        inicio=omp_get_wtime();
+    //inicio=omp_get_wtime();
 	quickSort(a,0,tam-1);
-        fim=GetTickCount();
-	for(int j=0; j<tam;j++){
-		printf("%d ,",a[j]);
-	}
-        tmili = final - inicio; 
-        printf("tempo decorrido: %d\n", tmili); 
+    //fim=GetTickCount();
+	//for(int j=0; j<tam;j++){
+	//	printf("%d ,",a[j]);
+	//}
+    //tmili = final - inicio; 
+    //printf("tempo decorrido: %d\n", tmili); 
 return 0;
 }
 

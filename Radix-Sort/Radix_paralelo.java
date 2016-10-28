@@ -7,25 +7,25 @@ public class Radix_paralelo{
 		int[] a=new int[tam];	
 		retornaAleatorio(a, tam);
 		start=System.currentTimeMillis();
-		radixSort(a); // aqui tem retorno do vetor !! verificar
+		radixSort(a, tam); // aqui tem retorno do vetor !! verificar
 		end=System.currentTimeMillis();
-		//for(int j=0; j<tam;j++){
-		//	System.out.print(a[j]+",");
-		//}
+		for(int j=0; j<tam;j++){
+			System.out.print(a[j]+",");
+		}
 		tempo=(end-start);
 		System.out.print("\n"+tempo+" ms");
 	}
 	
-	public static int[] radixSort(int vector[]) {
+	public static int[] radixSort(int vector[],int tam) {
         for (int digit = 0; digit < 3; digit++) {
             int power = (int) Math.pow(10, digit + 1);
 
-            int z[][] = new int[vector.length][10];
+            int z[][] = new int[tam][10];
             int n[] = new int[10];
 			// omp parallel firstprivate(n,z)
 			{
 				// omp critical
-				for (int i = 0; i < vector.length; i++) {
+				for (int i = 0; i < tam; i++) {
 					int num = vector[i];
 					z[n[(num % power) / (power / 10)]][(num % power) / (power / 10)] = num;
 					n[(num % power) / (power / 10)]++;
@@ -35,7 +35,7 @@ public class Radix_paralelo{
 				// omp parallel for private(c)
 				for (int i = 0; i < 10; i++) {
 
-					for (int j = 0; j < vector.length; j++) {
+					for (int j = 0; j < tam; j++) {
 						if (j < n[i]) {
 							vector[c] = z[j][i];
 							c++;

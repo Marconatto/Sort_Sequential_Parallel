@@ -1,6 +1,5 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <windows.h>
 
 void Swap(int &i, int &j) {
     int t = i;
@@ -77,17 +76,17 @@ void retornaAleatorio(int *a, int tam) {
 int main() {
     int tam = 1000;
     int *a;
-    int inicio, final, tmili;
+    //int inicio, final, tmili;
     a = (int*) calloc(tam, sizeof (int));
     retornaAleatorio(a, tam);
-    inicio = GetTickCount();
+    //inicio = GetTickCount();
     OddEvenSort(a, tam);
-    final = GetTickCount();
-    tmili = final - inicio; 
-    for (int j = 0; j < tam; j++) {
-        printf("%d ,", a[j]);
-    }
-    printf("tempo decorrido: %d\n", tmili); 
+    //final = GetTickCount();
+    //tmili = final - inicio; 
+    //for (int j = 0; j < tam; j++) {
+    //    printf("%d ,", a[j]);
+    //}
+    printf("tempo decorrido: "); 
     return 0;
 }
 

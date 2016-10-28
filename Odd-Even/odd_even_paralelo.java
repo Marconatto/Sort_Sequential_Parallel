@@ -13,7 +13,7 @@ public class odd_even_paralelo{
 		//	System.out.print(a[j]+",");
 		//}
 		tempo=(end-start);
-		System.out.print("\n"+tempo+" ms");
+		System.out.print("\n"+tempo+" ms\n");
 	}
 
 	public static void OddEvenSort(int[] a, int n){

@@ -15,7 +15,7 @@ public class odd_even_sequencial {
         //	System.out.print(a[j]+",");
         //}
         tempo = (end - start);
-        System.out.print("\n" + tempo + " ms");
+        System.out.print("\n" + tempo + " ms\n");
 
     }
 

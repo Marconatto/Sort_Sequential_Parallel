@@ -6,9 +6,16 @@
 void radixSort(int *a, int TAMVET) {
 	for (int digit = 0; digit < 3; digit++) {
 		int power = (int) pow(10, digit + 1);
-
-		int z[][] = new int[TAMVET][10];
-		int n[] = new int[10];
+		int z [TAMVET][10];
+		for (int b = 0; b < TAMVET; b++) {
+			for(int j=0;j<10;j++){
+				z[b][j]=0;
+			}
+		}
+		int n [10];
+		for(int h=0;h<10;h++){
+			n[h]=0;
+		}
 		#pragma omp parallel firstprivate(n,z)
 		{
 			#pragma omp critical
@@ -91,11 +98,10 @@ int main (){
 	start=omp_get_wtime();
 	radixSort(a,tam);
 	end=omp_get_wtime();
-	for(int j=0; j<tam;j++){
-		printf("%d ,",a[j]);
-	}
+	//for(int j=0; j<tam;j++){
+	//	printf("%d ,",a[j]);
+	//}
 	tempo=end-start;
-	printf("\n%f",tempo);
-
+	printf("\n%f\n",tempo);
 return 0;
 }

@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <omp.h>
-#include <windows.h>
 
 void OddEvenSort(int *a, int N) {
     int t, i, j, metade, ultimoPar, ultimoImpar;
@@ -76,22 +75,22 @@ void retornaAleatorio(int *a, int tam) {
 
 int main() {
     double start, end, tempo;
-    int inicio, final, tmili;
+    //int inicio, final, tmili;
     int tam = 1000;
     int *a;
     a = (int*) calloc(tam, sizeof (int));
     retornaAleatorio(a, tam);
-    inicio = GetTickCount();
+    //inicio = GetTickCount();
     start = omp_get_wtime();
     OddEvenSort(a, tam);
     end = omp_get_wtime();
-    final = GetTickCount();
-    tmili = final - inicio; 
-    for (int j = 0; j < tam; j++) {
-        printf("%d ,", a[j]);
-    }
+    //final = GetTickCount();
+    //tmili = final - inicio; 
+    //for (int j = 0; j < tam; j++) {
+    //    printf("%d ,", a[j]);
+    //}
     tempo = end - start;
-    printf("\ntempo função openmp%f", tempo);
-    printf("\ntempo decorrido função time.h: %d", tmili); 
+    printf("\ntempo função openmp %f\n", tempo);
+    //printf("\ntempo decorrido função time.h: %d", tmili); 
     return 0;
 }

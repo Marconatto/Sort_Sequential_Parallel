@@ -1,7 +1,7 @@
 
 import java.util.*;
 
-public class bitonic_sequencial {
+public class bitonic_sequencial{
 
     public static void main(String[] args) {
         long start, end, tempo;
@@ -9,11 +9,11 @@ public class bitonic_sequencial {
         int[] a = new int[tam];
         retornaAleatorio(a, tam);
         start = System.currentTimeMillis();
-        bitonicSort(tam,a);
+        bitonicSort(a,tam);
         end = System.currentTimeMillis();
-        //for(int j=0; j<tam;j++){
-        //	System.out.print(a[j]+",");
-        //}
+        for(int j=0; j<tam;j++){
+        	System.out.print(a[j]+",");
+        }
         tempo = (end - start);
         System.out.print("\n" + tempo + " ms");
 
@@ -26,12 +26,14 @@ public class bitonic_sequencial {
             boolean up = ((i >> p) & 2) == 0;
 
             if ((i & d) == 0 && (a[i] > a[i | d]) == up) {
-                int t = a[i]; a[i] = a[i | d]; a[i | d] = t;
+                int t = a[i];
+                a[i] = a[i | d];
+                a[i | d] = t;
             }
         }
     }
 
-    public static void bitonicSort(final int tam, int[] a) {
+    public static void bitonicSort(int[] a, final int tam) {
         for(int i=0;i<tam;i++) {
             for(int j=0;j<=i;j++) {
                 kernel(a, i, j);

@@ -4,9 +4,9 @@ import java.util.*;
 public class Quick_paralelo {
 
     public static void main(String[] args) {
-        long start, end, tempo;
+        long start=0, end=0, tempo=0;
         int tam = 1000;
-        int[] a = new int[tam];
+        int[] a=new int[tam];
         retornaAleatorio(a, tam);
         start = System.currentTimeMillis();
         // omp parallel private (a)
@@ -21,8 +21,8 @@ public class Quick_paralelo {
         System.out.print("\n" + tempo + " ms");
     }
 
-    public static void quickSort(int vetor[], int inicio, int fim) {
-        int i, j, meio, aux;
+    public static void quickSort(int[] vetor, int inicio, int fim) {
+        int i=0, j=0, meio=0, aux=0;
 
         i = inicio;
         j = fim;
