@@ -2,44 +2,57 @@
 import java.util.*;
 
 public class bitonic_sequencial{
-
     public static void main(String[] args) {
         long start, end, tempo;
         int tam = 1000;
         int[] a = new int[tam];
         retornaAleatorio(a, tam);
         start = System.currentTimeMillis();
-        bitonicSort(a,tam);
+        bitonicSort(a,0,tam,true);
         end = System.currentTimeMillis();
         for(int j=0; j<tam;j++){
-        	System.out.print(a[j]+",");
+            System.out.print(a[j]+",");
         }
         tempo = (end - start);
         System.out.print("\n" + tempo + " ms");
 
     }
 
-    public static void kernel(int[] a, final int p, final int q) {
-        final int d = 1 << (p-q);
-
-        for(int i=0;i<a.length;i++) {
-            boolean up = ((i >> p) & 2) == 0;
-
-            if ((i & d) == 0 && (a[i] > a[i | d]) == up) {
-                int t = a[i];
-                a[i] = a[i | d];
-                a[i | d] = t;
-            }
+    public static void bitonicSort(int a[], int lo, int cnt, boolean dir)    {
+        if (cnt > 1){
+            int k = cnt / 2;
+            bitonicSort(a,lo, k, true);
+            bitonicSort(a,lo + k, k, false);
+            bitonicMerge(a,lo, cnt, dir);
         }
     }
 
-    public static void bitonicSort(int[] a, final int tam) {
-        for(int i=0;i<tam;i++) {
-            for(int j=0;j<=i;j++) {
-                kernel(a, i, j);
+    public static void bitonicMerge(int a[], int lo, int cnt, boolean dir)    {
+        if (cnt > 1){
+            int k = cnt / 2;
+            int i;
+            for (i = lo; i < lo + k; i++)
+            {
+                compare(a, i, i + k, dir);
             }
+            bitonicMerge(a, lo, k, dir);
+            bitonicMerge(a, lo + k, k, dir);
         }
     }
+
+    
+    public static void compare(int a[], int i, int j, boolean dir)    {
+        if (dir == (a[i] > a[j])){
+            int h = a[i];
+            a[i] = a[j];
+            a[j] = h;
+        }
+    }
+
+
+
+
+
 
     public static void retornaVetorContrario(int a[], int tam) {
         int aux = tam;
@@ -88,4 +101,48 @@ public class bitonic_sequencial{
         }
     }
 
+    /*public static void main(String[] args) {
+        final int logn = 5, n = 1 << logn;
+        System.out.println(n);
+        int[] a0 = new int[n];
+        for(int i=0;i<n;i++) a0[i] = (int)(Math.random() * 1000);
+
+        for(int k=0;k<a0.length;k++) System.out.print(a0[k] + " ");
+        System.out.println();
+
+        bitonicSort(logn, a0);
+
+        for(int k=0;k<a0.length;k++) System.out.print(a0[k] + " ");
+        System.out.println();
+    }*/
+
+/*
+    
+
+    public static void kernel(int[] a, final int p, final int q) {
+        final int d = 1 << (p-q);
+
+        for(int i=0;i<a.length;i++) {
+            boolean up = ((i >> p) & 2) == 0;
+
+            if ((i & d) == 0 && (a[i] > a[i | d]) == up) {
+                int t = a[i];
+                a[i] = a[i | d];
+                a[i | d] = t;
+            }
+        }
+    }
+
+    public static void bitonicSort(int[] a, final int tam) {
+        for(int i=0;i<tam;i++) {
+            for(int j=0;j<=i;j++) {
+                kernel(a, i, j);
+            }
+        }
+    }
+
+    
+
+}
+*/
 }

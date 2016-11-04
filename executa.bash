@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 #-----------------------------------------------------#
 #  Arquivo:       executa.bash
 #  Descricao:     Execução dos codigos do TCC
@@ -6,65 +6,79 @@
 #  Autor:         Marco Antonio Marconatto
 #  Auxiliar:  http://www.devmedia.com.br/introducao-ao-shell-script-no-linux/25778
 #----------------------------------------------------#
-script log_saidas
-	 echo "Iniciando testes!"
-	 # ------------------declarando locais do quick sort
-	 locaisparaljav[0]="Quick-Sort/Quick_paralelo.java"
-	 locaissequejav[0]="Quick-Sort/Quick_sequencial.java"
-	 locaisparalcpp[0]="Quick-Sort/Quick-paralelo.cpp"
-	 locaissequecpp[0]="Quick-Sort/Quick-sequencial.cpp"
-	 # ------------------declarando locais do radix sort
-	 locaisparaljav[1]="Radix-Sort/Radix_paralelo.java"
-	 locaissequejav[1]="Radix-Sort/Radix_sequencial.java"
-	 locaisparalcpp[1]="Radix-Sort/Radix-paralelo.cpp"
-	 locaissequecpp[1]="Radix-Sort/Radix-sequencial.cpp"
-	 # ------------------declarando locais do odd-even
-	 locaisparaljav[2]="Odd-Even/odd_even_paralelo.java"
-	 locaissequejav[2]="Odd-Even/odd_even_sequencial.java"
-	 locaisparalcpp[2]="Odd-Even/odd-even-paralelo.cpp"
-	 locaissequecpp[2]="Odd-Even/odd-even-sequencial.cpp"
-	 # ------------------declarando locais do Merge-Sort
-	 locaisparaljav[3]="Merge-Sort/merge_paralelo.java"
-	 locaissequejav[3]="Merge-Sort/merge_sequencial.java"
-	 locaisparalcpp[3]="Merge-Sort/merge-paralelo.cpp"
-	 locaissequecpp[3]="Merge-Sort/merge-sequencial.cpp"
-	 # ------------------declarando locais do Bitonic-Sort
-	 locaisparaljav[4]="Bitonic-Sort/bitonic_paralelo.java"
-	 locaissequejav[4]="Bitonic-Sort/bitonic_sequencial.java"
-	 locaisparalcpp[4]="Bitonic-Sort/bitonic-paralelo.cpp"
-	 locaissequecpp[4]="Bitonic-Sort/bitonic-sequencial.cpp"
-	 # ------------------------------------------------------------------------
-	 for i in {10..0};
-	 do
-		echo "Repetição $i de 10 !"
-		for j in {5..0};
-		do
-			case $j in
-			"0")
-				echo "Execução Quick Sort"
-				;;
-			"1")
-				echo "Execução Radix Sort"
-				;;
-			"2")
-				echo "Execução Odd-Even Sort"
-				;;
-			"3")
-				echo "Execução Merge Sort"
-				;;
-			"4")
-				echo "Execução Bitonic Sort"
-				;;
-			esac
-		echo "--Execução java sequencial"
-		javac ${locaissequejav[$j]}
-		java ${locaissequejav[$j]}
-		echo "--Execução java paralelo"
-		omp4j ${locaisparaljav[$j]}
-		echo "--Execução C++ sequencial"
-		g++ ${locaissequecpp[$j]} -o saidaseqcpp
-		echo "--Execução C++ paralelo"
-		g++ -fopenmp ${locaisparalcpp[$j]} -o saidaparcpp
-		done
+echo "Iniciando testes!"
+# ------------------declarando locais do quick sort
+locaisparaljav[0]="Quick_paralelo"
+locaissequejav[0]="Quick_sequencial"
+locaisparalcpp[0]="Quick-paralelo.cpp"
+locaissequecpp[0]="Quick-sequencial.cpp"
+# ------------------declarando locais do radix sort
+locaisparaljav[1]="Radix_paralelo"
+locaissequejav[1]="Radix_sequencial"
+locaisparalcpp[1]="Radix-paralelo.cpp"
+locaissequecpp[1]="Radix-sequencial.cpp"
+# ------------------declarando locais do odd-even
+locaisparaljav[2]="odd_even_paralelo"
+locaissequejav[2]="odd_even_sequencial"
+locaisparalcpp[2]="odd-even-paralelo.cpp"
+locaissequecpp[2]="odd-even-sequencial.cpp"
+# ------------------declarando locais do Merge-Sort
+locaisparaljav[3]="merge_paralelo"
+locaissequejav[3]="merge_sequencial"
+locaisparalcpp[3]="merge-paralelo.cpp"
+locaissequecpp[3]="merge-sequencial.cpp"
+# ------------------declarando locais do Bitonic-Sort
+locaisparaljav[4]="bitonic_paralelo"
+locaissequejav[4]="bitonic_sequencial"
+locaisparalcpp[4]="bitonic-paralelo.cpp"
+locaissequecpp[4]="bitonic-sequencial.cpp"
+# ------------------------------------------------------------------------
+for i in 1 2 3 4 5 6 7 8 9 10
+do
+	echo 
+	echo "-------------------------Repeticao $i de 10 -----------------------------------------------"
+	for j in 0 1 2 3 4
+	do
+		case $j in
+		"0")
+			echo
+			echo "Execucao Quick Sort"
+			cd Quick-Sort/
+			;;
+		"1")
+			echo
+			echo "Execucao Radix Sort"
+			cd Radix-Sort/
+			;;
+		"2")
+			echo
+			echo "Execucao Odd-Even Sort"
+			cd Odd-Even/
+			;;
+		"3")
+			echo
+			echo "Execucao Merge Sort"
+			cd Merge-Sort/
+			;;
+		"4")
+			echo
+			echo "Execucao Bitonic Sort"
+			cd Bitonic-Sort/
+			;;
+		esac
+	echo
+	echo "--Execucao java sequencial"
+	javac "${locaissequejav[$j]}.java" ; time java "${locaissequejav[$j]}"
+	echo
+	echo "--Execucao java paralelo"
+	java -jar /home/marconatto/OMP4J/omp4j-1.2.jar "${locaisparaljav[$j]}" ; time java "${locaisparaljav[$j]}"
+	echo		
+	echo "--Execucao C++ sequencial"
+	g++ "${locaissequecpp[$j]}" -o saidaseqcpp ; time ./saidaseqcpp
+	echo		
+	echo "--Execucao C++ paralelo"
+	g++ -fopenmp "${locaisparalcpp[$j]}" -o saidaparcpp ; time ./saidaparcpp
+	cd ..
 	done
+done
 exit

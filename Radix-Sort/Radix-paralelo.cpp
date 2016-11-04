@@ -16,6 +16,7 @@ void radixSort(int *a, int TAMVET) {
 		for(int h=0;h<10;h++){
 			n[h]=0;
 		}
+		int c=0;
 		#pragma omp parallel firstprivate(n,z)
 		{
 			#pragma omp critical
@@ -25,8 +26,8 @@ void radixSort(int *a, int TAMVET) {
 				n[(num % power) / (power / 10)]++;
 
 			}
-			int c = 0;
-			#pragma omp parallel for private(c)
+			c = 0;
+			//#pragma omp parallel for //firstprivate(c)
 			for (int i = 0; i < 10; i++) {
 				for (int j = 0; j < TAMVET; j++) {
 					if (j < n[i]) {
@@ -96,6 +97,7 @@ int main (){
 	a= (int*) calloc(tam, sizeof(int));
 	retornaAleatorio(a, tam);	
 	start=omp_get_wtime();
+	#pragma omp parallel
 	radixSort(a,tam);
 	end=omp_get_wtime();
 	//for(int j=0; j<tam;j++){

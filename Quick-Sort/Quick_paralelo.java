@@ -6,7 +6,7 @@ public class Quick_paralelo {
     public static void main(String[] args) {
         long start=0, end=0, tempo=0;
         int tam = 1000;
-        int[] a=new int[tam];
+        int a[]=new int[tam];
         retornaAleatorio(a, tam);
         start = System.currentTimeMillis();
         // omp parallel private (a)
@@ -14,14 +14,14 @@ public class Quick_paralelo {
             quickSort(a, 0,tam-1);
         }
         end = System.currentTimeMillis();
-        for(int j=0; j<tam;j++){
+        /*for(int j=0; j<tam;j++){
         	System.out.print(a[j]+",");
-        }
+        }*/
         tempo = (end - start);
         System.out.print("\n" + tempo + " ms");
     }
 
-    public static void quickSort(int[] vetor, int inicio, int fim) {
+    public static void quickSort(int vetor[], int inicio, int fim) {
         int i=0, j=0, meio=0, aux=0;
 
         i = inicio;
@@ -52,7 +52,7 @@ public class Quick_paralelo {
         }
     }
 
-    public static void retornaVetorContrario(int[] a, int tam) {
+    public static void retornaVetorContrario(int a[], int tam) {
         int aux = tam;
         for (int i = 0; i <= tam; i++) {
             a[i] = aux;

@@ -8,8 +8,10 @@ void quickSort(int *vetor, int inicio, int fim)
  
    i = inicio;
    j = fim;
-   #pragma omp parallel private (meio)
-   meio = vetor[(i + j) / 2];
+   int ali =(i + j) / 2;
+   printf("%d\n", ali);
+   //#pragma omp parallel public (meio)
+   meio = vetor[ali];
  
    do
    {
@@ -89,7 +91,7 @@ int main (){
 	retornaAleatorio(a, tam);	
 	inicio=omp_get_wtime();
 	//start=GetTickCount();
-	#pragma omp parallel private (a)
+	#pragma omp parallel
     {
         quickSort(a,0,tam-1);
     }

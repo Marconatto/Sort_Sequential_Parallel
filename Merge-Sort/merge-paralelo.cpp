@@ -33,13 +33,13 @@ void mergesort(int * X, int n, int * tmp)
 {
    if (n < 2) return;
 
-   #pragma omp task firstprivate (X, n, tmp)
+   //#pragma omp task firstprivate (X, n, tmp)
    mergesort(X, n/2, tmp);
 
-   #pragma omp task firstprivate (X, n, tmp)
+   //#pragma omp task firstprivate (X, n, tmp)
    mergesort(X+(n/2), n-(n/2), tmp);
  
-   #pragma omp taskwait
+   //#pragma omp taskwait
 
     /* merge sorted halves into sorted list */
    merge(X, n, tmp);

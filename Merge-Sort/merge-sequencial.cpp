@@ -1,7 +1,6 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdlib.h>
-#include <windows.h>
 
 void merge(int * X, int n, int * tmp) {
    int i = 0;
@@ -91,19 +90,14 @@ void retornaAleatorio(int *a, int tam){
 
 //programa principal
 int main (){
-        int inicio, final, tmili; 
 	int tam=1000;
 	int *a, *tmp;
 	a= (int*) calloc(tam, sizeof(int));
 	tmp= (int*) calloc(tam, sizeof(int));
 	retornaAleatorio(a, tam);
-        inicio = GetTickCount();
         mergesort(a, tam, tmp);
-        final = GetTickCount();
-        tmili = final - inicio; 
 	for(int j=0; j<tam;j++){
 		printf("%d ,",a[j]);
 	}
-	printf("\ntempo decorrido função time.h: %d", tmili); 
 return 0;
 }

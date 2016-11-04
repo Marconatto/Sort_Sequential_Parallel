@@ -4,9 +4,10 @@ public class Radix_paralelo{
 	public static void main(String[]args){
 		long start, end, tempo;
 		int tam=1000;
-		int[] a=new int[tam];	
+		int a[]=new int[tam];	
 		retornaAleatorio(a, tam);
 		start=System.currentTimeMillis();
+		// omp parallel
 		radixSort(a, tam); // aqui tem retorno do vetor !! verificar
 		end=System.currentTimeMillis();
 		for(int j=0; j<tam;j++){
@@ -16,28 +17,27 @@ public class Radix_paralelo{
 		System.out.print("\n"+tempo+" ms");
 	}
 	
-	public static int[] radixSort(int vector[],int tam) {
+	public static int[] radixSort(int[] a,int tam) {
         for (int digit = 0; digit < 3; digit++) {
             int power = (int) Math.pow(10, digit + 1);
 
             int z[][] = new int[tam][10];
             int n[] = new int[10];
-			// omp parallel firstprivate(n,z)
+			// omp parallel private(n,z)
 			{
 				// omp critical
 				for (int i = 0; i < tam; i++) {
-					int num = vector[i];
+					int num = a[i]; // erro aqui
 					z[n[(num % power) / (power / 10)]][(num % power) / (power / 10)] = num;
 					n[(num % power) / (power / 10)]++;
-
 				}
 				int c = 0;
-				// omp parallel for private(c)
+				// omp parallel for private (a)
 				for (int i = 0; i < 10; i++) {
-
+					//System.out.println(n[i]);
 					for (int j = 0; j < tam; j++) {
 						if (j < n[i]) {
-							vector[c] = z[j][i];
+							a[c] = z[j][i]; ///erro aqui
 							c++;
 						} else {
 							break;
@@ -47,10 +47,10 @@ public class Radix_paralelo{
 			}
 
         }
-		return vector;
+        return a;
     }
 	
-	public static void retornaVetorContrario(int[] a, int tam){
+	public static void retornaVetorContrario(int a[], int tam){
 		int aux=tam;
 		for(int i=0;i<=tam;i++){
 			a[i]=aux;
@@ -58,7 +58,7 @@ public class Radix_paralelo{
 		}
 	}
 
-	public static void retornaAleatorio(int[] a, int tam){
+	public static void retornaAleatorio(int a[], int tam){
 		int auxvet[]={629,486,29,610,80,247,100,493,497,590,657,307,611,77,823,532,615,727,675,407,748,111,
 		825,443,760,678,895,549,681,71,921,952,176,66,185,926,50,546,605,215,459,36,400,408,166,404,775,627,
 		877,591,689,855,604,686,290,575,226,238,8,708,374,959,419,971,44,600,659,393,105,112,4,283,606,613,445,

@@ -3,44 +3,37 @@
 #define UP 0
 #define DOWN 1
 
-void Swap(int &i, int &j) {
-    int t = i;
-    i = j;
-    j = t;
-}
-
-void merge_up(int a[], int n) {
-    int step = n / 2, i, j, k, temp;
-    while (step > 0) {
-        for (i = 0; i < n; i += step * 2) {
-            for (j = i, k = 0; k < step; j++, k++) {
-                if (a[j] > a[j + step]) {
-                    // swap
-                    temp = a[j];
-                    a[j] = a[j + step];
-                    a[j + step] = temp;
-                }
+void bitonicMerge(int *a, int low, int cnt, int dir){
+    if (cnt>1){
+        int k = cnt/2;
+        for (int i=low; i<low+k; i++){
+            if (dir==(a[i]>a[i+k])){
+                int h=a[i];
+                a[i]=a[i+k];
+                a[i+k]=h;
             }
         }
-        step /= 2;
+        bitonicMerge(a, low, k, dir);
+        bitonicMerge(a, low+k, k, dir);
     }
 }
-
-void merge_down(int a[], int n) {
-    int step = n / 2, i, j, k, temp;
-    while (step > 0) {
-        for (i = 0; i < n; i += step * 2) {
-            for (j = i, k = 0; k < step; j++, k++) {
-                if (a[j] < a[j + step]) {
-                    // swap
-                    temp = a[j];
-                    a[j] = a[j + step];
-                    a[j + step] = temp;
-                }
-            }
-        }
-        step /= 2;
+void bitonicSort(int *a,int low, int cnt, int dir){
+    if (cnt>1){
+        int k = cnt/2;
+ 
+        // sort in ascending order since dir here is 1
+        bitonicSort(a, low, k, 0);
+ 
+        // sort in descending order since dir here is 0
+        bitonicSort(a, low+k, k, 1);
+ 
+        // Will merge wole sequence in ascending order
+        // since dir=1.
+        bitonicMerge(a,low, cnt, dir);
     }
+}
+void sort(int *a, int N, int up){
+    bitonicSort(a,0, N, up);
 }
 
 void retornaVetorContrario(int *a, int tam) {
@@ -97,15 +90,8 @@ int main() {
     int *a;
     a = (int*) calloc(tam, sizeof (int));
     retornaAleatorio(a, tam);
-    for (int s = 2; s <= tam; s *= 2) {
-        for (int i = 0; i < tam;) {
-            merge_up((a + i), s);
-            //printf("blabla %d\n",a+i);
-            merge_down((a + i + s), s);
-            //printf("clclclabla %d\n",a+i+s);
-            i += s * 2;
-        }
-    }
+    int up = 1;   // means sort in ascending order
+    sort(a, tam, up);
     for (int j = 0; j < tam; j++) {
         printf("%d ,", a[j]);
     }
