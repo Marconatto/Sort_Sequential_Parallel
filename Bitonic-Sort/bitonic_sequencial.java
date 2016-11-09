@@ -2,14 +2,17 @@ import java.util.*;
 
 public class bitonic_sequencial{
     public static void main(String[] args) {
+        long start, end, tempo;
         final int logn = 10, n = 1 << logn;
-        System.out.println(n);
         int[] a0 = new int[n];
         retornaAleatorio(a0,n);
+        start=System.currentTimeMillis();
         bitonicSort(a0,logn);
-
-        for(int k=0;k<a0.length;k++) System.out.print(a0[k] + " ");
-        System.out.println();
+        end=System.currentTimeMillis();
+        //for(int k=0;k<a0.length;k++) System.out.print(a0[k] + " ");
+        //System.out.println();
+        tempo=(end-start);
+        System.out.print("\n"+tempo+" ms\n");
     }
 
 

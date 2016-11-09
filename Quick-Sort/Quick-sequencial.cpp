@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctime>
+#include <cstdlib>
 
 
 void quickSort(int *vetor, int inicio, int fim)
@@ -82,18 +84,19 @@ void retornaAleatorio(int *a, int tam){
 //programa principal
 int main (){
 	int tam=1000;
-    //double inicio, fim, tmili;
+    double segundosTotal;
 	int *a;
 	a= (int*) calloc(tam, sizeof(int));
 	retornaAleatorio(a, tam);
-    //inicio=omp_get_wtime();
+    clock_t startTime = clock();
 	quickSort(a,0,tam-1);
-    //fim=GetTickCount();
+    segundosTotal = (clock() - startTime)/(double)(CLOCKS_PER_SEC);
 	//for(int j=0; j<tam;j++){
 	//	printf("%d ,",a[j]);
 	//}
     //tmili = final - inicio; 
     //printf("tempo decorrido: %d\n", tmili); 
+    printf("%f s lib ctime\n", segundosTotal);
 return 0;
 }
 

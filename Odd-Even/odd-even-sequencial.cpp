@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctime>
+#include <cstdlib>
 
 void Swap(int &i, int &j) {
     int t = i;
@@ -76,17 +78,16 @@ void retornaAleatorio(int *a, int tam) {
 int main() {
     int tam = 1000;
     int *a;
-    //int inicio, final, tmili;
+    double segundosTotal;
     a = (int*) calloc(tam, sizeof (int));
     retornaAleatorio(a, tam);
-    //inicio = GetTickCount();
+    clock_t startTime = clock();
     OddEvenSort(a, tam);
-    //final = GetTickCount();
-    //tmili = final - inicio; 
+    segundosTotal = (clock() - startTime)/(double)(CLOCKS_PER_SEC);
     //for (int j = 0; j < tam; j++) {
     //    printf("%d ,", a[j]);
     //}
-    //printf("tempo decorrido: "); 
+    printf("%f s lib ctime\n", segundosTotal);
     return 0;
 }
 

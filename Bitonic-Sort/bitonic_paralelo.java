@@ -12,8 +12,8 @@ public class bitonic_paralelo{
         bitonicSort(a,logn);
     	}
         end=System.currentTimeMillis();
-        for(int k=0;k<a.length;k++) System.out.print(a[k] + " ");
-        System.out.println();
+        //for(int k=0;k<a.length;k++) System.out.print(a[k] + " ");
+        //System.out.println();
     	tempo=(end-start);
 		System.out.print("\n"+tempo+" ms");
     }

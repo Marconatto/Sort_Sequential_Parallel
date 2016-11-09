@@ -10,11 +10,11 @@ public class Radix_paralelo{
 		// omp parallel
 		radixSort(a, tam); // aqui tem retorno do vetor !! verificar
 		end=System.currentTimeMillis();
-		//for(int j=0; j<tam;j++){
-		//	System.out.print(a[j]+",");
-		//}
+		for(int j=0; j<tam;j++){
+			System.out.print(a[j]+",");
+		}
 		tempo=(end-start);
-		System.out.print("\n"+tempo+" ms");
+		System.out.print("\n"+tempo+" s\n");
 	}
 	
 	public static int[] radixSort(int[] a,int tam) {
@@ -23,19 +23,16 @@ public class Radix_paralelo{
 
             int z[][] = new int[tam][10];
             int n[] = new int[10];
-			// omp parallel private(n,z)
-			{
-				// omp critical
+            // firstprivate(n,z)
+            {
 				for (int i = 0; i < tam; i++) {
 					int num = a[i]; // erro aqui
 					z[n[(num % power) / (power / 10)]][(num % power) / (power / 10)] = num;
 					n[(num % power) / (power / 10)]++;
 				}
 				int c = 0;
-				// omp parallel for private (a)
 				for (int i = 0; i < 10; i++) {
-					//System.out.println(n[i]);
-					for (int j = 0; j < tam; j++) {
+					for (int j = 0; j < a.length; j++) {
 						if (j < n[i]) {
 							a[c] = z[j][i]; ///erro aqui
 							c++;
@@ -45,7 +42,6 @@ public class Radix_paralelo{
 					}
 				}
 			}
-
         }
         return a;
     }

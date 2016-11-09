@@ -13,7 +13,7 @@ public class Radix_sequencial{
 		//	System.out.print(a[j]+",");
 		//}
 		tempo=(end-start);
-		System.out.print("\n"+tempo+" ms");
+		System.out.print("\n"+tempo*1000+" s");
 
 
 	}
@@ -38,6 +38,7 @@ public class Radix_sequencial{
                     if (j < n[i]) {
                         vector[c] = z[j][i];
                         c++;
+                        System.out.println(c);
                     } else {
                         break;
                     }

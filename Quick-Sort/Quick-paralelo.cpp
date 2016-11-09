@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <omp.h>
+#include <ctime>
+#include <cstdlib>
 
 void quickSort(int *vetor, int inicio, int fim)
 {
@@ -84,25 +86,25 @@ void retornaAleatorio(int *a, int tam){
 int main (){
 	double end=0, tempo=0;
 	double inicio=0;
+	double segundosTotal;
 	int tam=1000;
 	int *a;
 	a= (int*) calloc(tam, sizeof(int));
 	retornaAleatorio(a, tam);	
 	inicio=omp_get_wtime();
-	//start=GetTickCount();
+	clock_t startTime = clock();
 	#pragma omp parallel
     {
         quickSort(a,0,tam-1);
     }
 	end=omp_get_wtime();
-	//fim=GetTickCount();
+	segundosTotal = (clock() - startTime)/(double)(CLOCKS_PER_SEC);
 	tempo=end-inicio;
-    //tmili = fim - inicio; 
     //for(int j=0; j<tam;j++){
 	//	printf("%d ,",a[j]);
 	//}
-	printf("\ntempo do contador paralelo%f\n",tempo);
-    //    printf("tempo decorrido: %d\n", tmili); 
+	printf("%f s lib ctime\n", segundosTotal);
+	printf("%f s lib openmp\n",tempo);
 
 return 0;
 }

@@ -71,13 +71,17 @@ do
 	javac "${locaissequejav[$j]}.java" ; time java "${locaissequejav[$j]}"
 	echo
 	echo "--Execucao java paralelo"
-	java -jar /home/marconatto/OMP4J/omp4j-1.2.jar "${locaisparaljav[$j]}" ; time java "${locaisparaljav[$j]}"
+	java -jar /home/marconatto/OMP4J/omp4j-1.2.jar "${locaisparaljav[$j]}.java" ; time java "${locaisparaljav[$j]}"
 	echo		
 	echo "--Execucao C++ sequencial"
 	g++ "${locaissequecpp[$j]}" -o saidaseqcpp ; time ./saidaseqcpp
 	echo		
 	echo "--Execucao C++ paralelo"
 	g++ -fopenmp "${locaisparalcpp[$j]}" -o saidaparcpp ; time ./saidaparcpp
+	rm -r org
+	rm -r saidaseqcpp
+	rm -r saidaparcpp
+	rm *.class
 	cd ..
 	done
 done

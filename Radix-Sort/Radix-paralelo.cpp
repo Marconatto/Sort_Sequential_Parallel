@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <math.h>
+#include <ctime>
+#include <cstdlib>
 #include <omp.h>
 
 void radixSort(int *a, int TAMVET) {
@@ -92,18 +94,22 @@ void retornaAleatorio(int *a, int tam){
 //programa principal
 int main (){
 	double start, end, tempo;
+	double segundosTotal;
 	int tam=1000;
 	int *a;
 	a= (int*) calloc(tam, sizeof(int));
-	retornaAleatorio(a, tam);	
+	retornaAleatorio(a, tam);
+	clock_t startTime = clock();	
 	start=omp_get_wtime();
 	#pragma omp parallel
 	radixSort(a,tam);
 	end=omp_get_wtime();
+	segundosTotal = (clock() - startTime)/(double)(CLOCKS_PER_SEC);
 	//for(int j=0; j<tam;j++){
 	//	printf("%d ,",a[j]);
 	//}
 	tempo=end-start;
-	printf("\n%f\n",tempo);
+	printf("%f s lib ctime\n", segundosTotal);
+	printf("%f s lib openmp\n",tempo);
 return 0;
 }

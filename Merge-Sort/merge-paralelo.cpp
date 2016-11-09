@@ -2,6 +2,8 @@
 #include <string.h>
 #include <stdlib.h>
 #include <omp.h>
+#include <ctime>
+#include <cstdlib>
 
 void merge(int * X, int n, int * tmp) {
    int i = 0;
@@ -95,13 +97,13 @@ void retornaAleatorio(int *a, int tam){
 //programa principal
 int main (){
         double start, end, tempo;
-        //int inicio, final, tmili; 
+    double segundosTotal;
 	int tam=1000;
 	int *a, *tmp;
 	a= (int*) calloc(tam, sizeof(int));
 	tmp= (int*) calloc(tam, sizeof(int));
 	retornaAleatorio(a, tam);
-    //    inicio = GetTickCount();
+    clock_t startTime = clock();
 	start=omp_get_wtime();
 	#pragma omp parallel
             {
@@ -109,13 +111,12 @@ int main (){
                mergesort(a, tam, tmp);
             }
 	end=omp_get_wtime();
-    //final = GetTickCount();
-    //tmili = final - inicio; 
+    segundosTotal = (clock() - startTime)/(double)(CLOCKS_PER_SEC);
 	//for(int j=0; j<tam;j++){
 	//	printf("%d ,",a[j]);
 	//}
 	tempo=end-start;
-	printf("\ntempo função openmp %f\n", tempo);
-     //   printf("\ntempo decorrido função time.h: %d", tmili); 
+	printf("%f s lib ctime\n", segundosTotal);
+	printf("%f s lib openmp\n",tempo);
 return 0;
 }

@@ -14,11 +14,11 @@ public class Quick_paralelo {
             quickSort(a, 0,tam-1);
         }
         end = System.currentTimeMillis();
-        /*for(int j=0; j<tam;j++){
-        	System.out.print(a[j]+",");
-        }*/
+        //for(int j=0; j<tam;j++){
+        //	System.out.print(a[j]+",");
+        //}
         tempo = (end - start);
-        System.out.print("\n" + tempo + " ms");
+        System.out.print("\n" + tempo + " ms\n");
     }
 
     public static void quickSort(int vetor[], int inicio, int fim) {

@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctime>
+#include <cstdlib>
 #include <math.h>
 
 void radixSort(int *a, int TAMVET) {
@@ -87,15 +89,18 @@ void retornaAleatorio(int *a, int tam){
 
 //programa principal
 int main (){
+	double segundosTotal;
 	int tam=1000;
 	int *a;
 	a= (int*) calloc(tam, sizeof(int));
 	retornaAleatorio(a, tam);
+	clock_t startTime = clock();	
 	radixSort(a,tam);
 	//for(int j=0; j<tam;j++){
 	//	printf("%d ,",a[j]);
 	//}
-
+	segundosTotal = (clock() - startTime)/(double)(CLOCKS_PER_SEC);
+	printf("%f s lib ctime\n", segundosTotal);
 return 0;
 }
 
