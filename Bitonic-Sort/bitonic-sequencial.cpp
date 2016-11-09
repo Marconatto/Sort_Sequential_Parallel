@@ -1,39 +1,26 @@
 #include <stdio.h>
 #include <stdlib.h>
-#define UP 0
-#define DOWN 1
 
-void bitonicMerge(int *a, int low, int cnt, int dir){
-    if (cnt>1){
-        int k = cnt/2;
-        for (int i=low; i<low+k; i++){
-            if (dir==(a[i]>a[i+k])){
-                int h=a[i];
-                a[i]=a[i+k];
-                a[i+k]=h;
-            }
-        }
-        bitonicMerge(a, low, k, dir);
-        bitonicMerge(a, low+k, k, dir);
-    }
+// Ordena sequência bitonica
+void BitonicSplit(int *v, int n, bool inc){
+    if (n <= 1) return;
+ 
+    for(int i=0; i<n/2; i++)
+        if ((inc && v[i] > v[i+n/2])||(!inc && v[i] < v[i+n/2])){
+        	int t=v[i+n/2];
+		 	v[i+n/2]=v[i];
+		 	v[i]=t;
+ 		}
+    BitonicSplit(v, n/2, inc);
+    BitonicSplit(v + n/2, n/2, inc);
 }
-void bitonicSort(int *a,int low, int cnt, int dir){
-    if (cnt>1){
-        int k = cnt/2;
+// Ordena sequência arbitrária
+void BitonicSort(int *v, int n, bool inc){
+    if (n <= 1) return;
  
-        // sort in ascending order since dir here is 1
-        bitonicSort(a, low, k, 0);
- 
-        // sort in descending order since dir here is 0
-        bitonicSort(a, low+k, k, 1);
- 
-        // Will merge wole sequence in ascending order
-        // since dir=1.
-        bitonicMerge(a,low, cnt, dir);
-    }
-}
-void sort(int *a, int N, int up){
-    bitonicSort(a,0, N, up);
+    BitonicSort(v, n/2, inc);        // Ordena cresc.
+    BitonicSort(v + n/2, n/2, !inc); // Ordena decresc.
+    BitonicSplit(v, n, inc);
 }
 
 void retornaVetorContrario(int *a, int tam) {
@@ -91,7 +78,7 @@ int main() {
     a = (int*) calloc(tam, sizeof (int));
     retornaAleatorio(a, tam);
     int up = 1;   // means sort in ascending order
-    sort(a, tam, up);
+    BitonicSort(a, tam, true);
     for (int j = 0; j < tam; j++) {
         printf("%d ,", a[j]);
     }

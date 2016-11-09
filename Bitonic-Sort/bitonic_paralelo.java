@@ -1,45 +1,46 @@
 import java.util.*;
 
 public class bitonic_paralelo{
-	public static void main(String[]args){
+	public static void main(String[] args) {
 		long start, end, tempo;
-		int tam=1000;
-		int[] a=new int[tam];	
-		retornaAleatorio(a, tam);
-		start=System.currentTimeMillis();
-		OddEvenSort(a,tam);
-		end=System.currentTimeMillis();
-		//for(int j=0; j<tam;j++){
-		//	System.out.print(a[j]+",");
-		//}
-		tempo=(end-start);
+        final int logn = 10, n = 1 << logn;
+        int a[] = new int[n];
+        retornaAleatorio(a,n);
+        start=System.currentTimeMillis();
+        // omp parallel private(a)
+        {
+        bitonicSort(a,logn);
+    	}
+        end=System.currentTimeMillis();
+        for(int k=0;k<a.length;k++) System.out.print(a[k] + " ");
+        System.out.println();
+    	tempo=(end-start);
 		System.out.print("\n"+tempo+" ms");
-	}
+    }
 
-	public static void OddEvenSort(int[] a, int n){
-		int t=0;
-	    for (int i = 0; i < n; ++i){
-		// omp parallel for private(j, t)
-		    for (int j = 2; j < n; j+=2){
-		        if (a[j] < a[j-1]){
-				t=a[j-1];
-			 	a[j-1]=a[j];
-			 	a[j]=t;
-			}
-			}
-	 	// omp parallel for private(j, t)
-		    for (int j = 1; j < n; j+=2){
-		        if (a[j] < a[j-1]){
-		            	t=a[j-1];
-			 	a[j-1]=a[j];
-			 	a[j]=t;
-			}
-			}
-	    }
+    public static void kernel(int[] a, final int p, final int q) {
+        final int d = 1 << (p-q);
+        
+        for(int i=0;i<a.length;i++) {
+            boolean up = ((i >> p) & 2) == 0;
 
-	}
+            if ((i & d) == 0 && (a[i] > a[i | d]) == up) {
+                int t = a[i];
+                a[i] = a[i | d];
+                a[i | d] = t;
+            }
+        }
+    }
 
+    public static void bitonicSort(int[] a, final int tam) {
 
+        for(int i=0;i<tam;i++) {
+            for(int j=0;j<=i;j++) {
+                kernel(a, i, j);
+            }
+        }
+    }
+	
 	public static void retornaVetorContrario(int[] a, int tam){
 		int aux=tam;
 		for(int i=0;i<=tam;i++){
@@ -49,7 +50,7 @@ public class bitonic_paralelo{
 	}
 
 	public static void retornaAleatorio(int[] a, int tam){
-		int auxvet[]={629,486,29,610,80,247,100,493,497,590,657,307,611,77,823,532,615,727,675,407,748,111,
+		int[] auxvet={629,486,29,610,80,247,100,493,497,590,657,307,611,77,823,532,615,727,675,407,748,111,
 		825,443,760,678,895,549,681,71,921,952,176,66,185,926,50,546,605,215,459,36,400,408,166,404,775,627,
 		877,591,689,855,604,686,290,575,226,238,8,708,374,959,419,971,44,600,659,393,105,112,4,283,606,613,445,
 		6,192,48,985,874,992,19,846,988,869,626,909,205,946,133,630,260,640,897,866,284,410,132,470,200,187,520,
@@ -83,7 +84,11 @@ public class bitonic_paralelo{
 		113,673,631,79,312,149,886,167,140,652,135,41,456,752,253,663,268,735,89,340,821,425,366,18,287,876,643,273,42,607,
 		978,244,246,305,746,937,806,235,276,102,612,701,744,314,87,131,972,69,146,130,933,873,647,300,609,634,534,677,447,286};	
 		for(int i=0;i<tam;i++){
+			if(i<tam-24){
 			a[i]=auxvet[i];
+			}else{
+				a[i]=0;
+			}
 		}
 	}
 

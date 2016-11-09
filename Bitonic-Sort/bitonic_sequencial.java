@@ -1,64 +1,39 @@
-
 import java.util.*;
 
 public class bitonic_sequencial{
     public static void main(String[] args) {
-        long start, end, tempo;
-        int tam = 1000;
-        int[] a = new int[tam];
-        retornaAleatorio(a, tam);
-        start = System.currentTimeMillis();
-        bitonicSort(a,0,tam,true);
-        end = System.currentTimeMillis();
-        for(int j=0; j<tam;j++){
-            System.out.print(a[j]+",");
-        }
-        tempo = (end - start);
-        System.out.print("\n" + tempo + " ms");
+        final int logn = 10, n = 1 << logn;
+        System.out.println(n);
+        int[] a0 = new int[n];
+        retornaAleatorio(a0,n);
+        bitonicSort(a0,logn);
 
+        for(int k=0;k<a0.length;k++) System.out.print(a0[k] + " ");
+        System.out.println();
     }
 
-    public static void bitonicSort(int a[], int lo, int cnt, boolean dir)    {
-        if (cnt > 1){
-            int k = cnt / 2;
-            bitonicSort(a,lo, k, true);
-            bitonicSort(a,lo + k, k, false);
-            bitonicMerge(a,lo, cnt, dir);
-        }
-    }
-
-    public static void bitonicMerge(int a[], int lo, int cnt, boolean dir)    {
-        if (cnt > 1){
-            int k = cnt / 2;
-            int i;
-            for (i = lo; i < lo + k; i++)
-            {
-                compare(a, i, i + k, dir);
-            }
-            bitonicMerge(a, lo, k, dir);
-            bitonicMerge(a, lo + k, k, dir);
-        }
-    }
 
     
-    public static void compare(int a[], int i, int j, boolean dir)    {
-        if (dir == (a[i] > a[j])){
-            int h = a[i];
-            a[i] = a[j];
-            a[j] = h;
+
+    public static void kernel(int[] a, final int p, final int q) {
+        final int d = 1 << (p-q);
+
+        for(int i=0;i<a.length;i++) {
+            boolean up = ((i >> p) & 2) == 0;
+
+            if ((i & d) == 0 && (a[i] > a[i | d]) == up) {
+                int t = a[i];
+                a[i] = a[i | d];
+                a[i | d] = t;
+            }
         }
     }
 
-
-
-
-
-
-    public static void retornaVetorContrario(int a[], int tam) {
-        int aux = tam;
-        for (int i = 0; i <= tam; i++) {
-            a[i] = aux;
-            aux = aux - 1;
+    public static void bitonicSort(int[] a, final int tam) {
+        for(int i=0;i<tam;i++) {
+            for(int j=0;j<=i;j++) {
+                kernel(a, i, j);
+            }
         }
     }
 
@@ -96,53 +71,8 @@ public class bitonic_sequencial{
             917, 688, 871, 621, 619, 845, 202, 241, 446, 214, 942, 889, 504, 32, 703, 326, 95, 577, 920, 308, 411, 614, 9, 165, 16, 225, 905, 578, 550, 888,
             113, 673, 631, 79, 312, 149, 886, 167, 140, 652, 135, 41, 456, 752, 253, 663, 268, 735, 89, 340, 821, 425, 366, 18, 287, 876, 643, 273, 42, 607,
             978, 244, 246, 305, 746, 937, 806, 235, 276, 102, 612, 701, 744, 314, 87, 131, 972, 69, 146, 130, 933, 873, 647, 300, 609, 634, 534, 677, 447, 286};
-        for (int i = 0; i < tam; i++) {
+        for (int i = 0; i < tam-24; i++) {
             a[i] = auxvet[i];
         }
     }
-
-    /*public static void main(String[] args) {
-        final int logn = 5, n = 1 << logn;
-        System.out.println(n);
-        int[] a0 = new int[n];
-        for(int i=0;i<n;i++) a0[i] = (int)(Math.random() * 1000);
-
-        for(int k=0;k<a0.length;k++) System.out.print(a0[k] + " ");
-        System.out.println();
-
-        bitonicSort(logn, a0);
-
-        for(int k=0;k<a0.length;k++) System.out.print(a0[k] + " ");
-        System.out.println();
-    }*/
-
-/*
-    
-
-    public static void kernel(int[] a, final int p, final int q) {
-        final int d = 1 << (p-q);
-
-        for(int i=0;i<a.length;i++) {
-            boolean up = ((i >> p) & 2) == 0;
-
-            if ((i & d) == 0 && (a[i] > a[i | d]) == up) {
-                int t = a[i];
-                a[i] = a[i | d];
-                a[i | d] = t;
-            }
-        }
-    }
-
-    public static void bitonicSort(int[] a, final int tam) {
-        for(int i=0;i<tam;i++) {
-            for(int j=0;j<=i;j++) {
-                kernel(a, i, j);
-            }
-        }
-    }
-
-    
-
-}
-*/
 }

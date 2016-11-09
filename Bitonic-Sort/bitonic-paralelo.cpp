@@ -8,9 +8,9 @@ void OddEvenSort(int *a, int N){
         #pragma omp parallel for private(i, t)
         for(i=0;i<N-1;i=i+2){
             if(a[i] > a[i+1]){
-		t=a[i+1];
-	 	a[i+1]=a[i];
-	 	a[i]=t;
+			t=a[i+1];
+		 	a[i+1]=a[i];
+		 	a[i]=t;
             }
         }
         #pragma omp parallel for private(i, t)

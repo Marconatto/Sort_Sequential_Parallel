@@ -111,9 +111,9 @@ int main (){
 	end=omp_get_wtime();
     //final = GetTickCount();
     //tmili = final - inicio; 
-	for(int j=0; j<tam;j++){
-		printf("%d ,",a[j]);
-	}
+	//for(int j=0; j<tam;j++){
+	//	printf("%d ,",a[j]);
+	//}
 	tempo=end-start;
 	printf("\ntempo função openmp %f\n", tempo);
      //   printf("\ntempo decorrido função time.h: %d", tmili); 

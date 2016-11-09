@@ -86,7 +86,7 @@ int main() {
     //for (int j = 0; j < tam; j++) {
     //    printf("%d ,", a[j]);
     //}
-    printf("tempo decorrido: "); 
+    //printf("tempo decorrido: "); 
     return 0;
 }
 

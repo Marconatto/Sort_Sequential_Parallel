@@ -96,8 +96,8 @@ int main (){
 	tmp= (int*) calloc(tam, sizeof(int));
 	retornaAleatorio(a, tam);
         mergesort(a, tam, tmp);
-	for(int j=0; j<tam;j++){
-		printf("%d ,",a[j]);
-	}
+	//for(int j=0; j<tam;j++){
+	//	printf("%d ,",a[j]);
+	//}
 return 0;
 }

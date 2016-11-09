@@ -9,7 +9,6 @@ void quickSort(int *vetor, int inicio, int fim)
    i = inicio;
    j = fim;
    int ali =(i + j) / 2;
-   printf("%d\n", ali);
    //#pragma omp parallel public (meio)
    meio = vetor[ali];
  
@@ -99,9 +98,9 @@ int main (){
 	//fim=GetTickCount();
 	tempo=end-inicio;
     //tmili = fim - inicio; 
-    for(int j=0; j<tam;j++){
-		printf("%d ,",a[j]);
-	}
+    //for(int j=0; j<tam;j++){
+	//	printf("%d ,",a[j]);
+	//}
 	printf("\ntempo do contador paralelo%f\n",tempo);
     //    printf("tempo decorrido: %d\n", tmili); 
 

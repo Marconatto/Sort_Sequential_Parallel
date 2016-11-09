@@ -15,12 +15,11 @@ public class merge_paralelo {
         end = System.currentTimeMillis();
         tempo = (end - start);
         System.out.print("\n" + tempo + " ms\n");
-        System.out.println(Arrays.toString(a));
+        //System.out.println(Arrays.toString(a));
     }
 
     public static void mergeSort(int a[]) {
         int tmp[] = new int[a.length];
-        // omp single
         {
             mergeSort(a, tmp, 0, a.length - 1);
         }
@@ -29,11 +28,8 @@ public class merge_paralelo {
     private static void mergeSort(int a[], int tmp[], int left, int right) {
         if (left < right) {
             int center = (left + right) / 2;
-            // omp task firstprivate (a,tmp,left,center)
             mergeSort(a, tmp, left, center);
-            // omp task firstprivate (a,tmp,right,center)
             mergeSort(a, tmp, center + 1, right);
-            // omp taskwait
             merge(a, tmp, left, center + 1, right);
         }
     }
