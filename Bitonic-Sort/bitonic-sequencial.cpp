@@ -1,27 +1,28 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <ctime>
+#include <cstdlib>
 
-// Ordena sequência bitonica
-void BitonicSplit(int *v, int n, bool inc){
-    if (n <= 1) return;
- 
-    for(int i=0; i<n/2; i++)
-        if ((inc && v[i] > v[i+n/2])||(!inc && v[i] < v[i+n/2])){
-        	int t=v[i+n/2];
-		 	v[i+n/2]=v[i];
-		 	v[i]=t;
- 		}
-    BitonicSplit(v, n/2, inc);
-    BitonicSplit(v + n/2, n/2, inc);
-}
-// Ordena sequência arbitrária
-void BitonicSort(int *v, int n, bool inc){
-    if (n <= 1) return;
- 
-    BitonicSort(v, n/2, inc);        // Ordena cresc.
-    BitonicSort(v + n/2, n/2, !inc); // Ordena decresc.
-    BitonicSplit(v, n, inc);
-}
+void kernel(int *a, int p, int q, int tam) {
+        int d = 1 << (p-q);
+
+        for(int i=0;i<tam;i++) {
+            bool up = ((i >> p) & 2) == 0;
+            if (((i & d) == 0) && (a[i] > a[i | d]) == up) {
+                int t = a[i];
+                a[i] = a[i | d];
+                a[i | d] = t;
+            }
+        }
+    }
+
+void bitonicSort(int *a, int logn, int tam) {
+        for(int i=0;i<logn;i++) {
+            for(int j=0;j<=i;j++) {
+                kernel(a, i, j, tam);
+            }
+        }
+    }
 
 void retornaVetorContrario(int *a, int tam) {
     int aux = tam;
@@ -66,24 +67,27 @@ void retornaAleatorio(int *a, int tam) {
         113, 673, 631, 79, 312, 149, 886, 167, 140, 652, 135, 41, 456, 752, 253, 663, 268, 735, 89, 340, 821, 425, 366, 18, 287, 876, 643, 273, 42, 607,
         978, 244, 246, 305, 746, 937, 806, 235, 276, 102, 612, 701, 744, 314, 87, 131, 972, 69, 146, 130, 933, 873, 647, 300, 609, 634, 534, 677, 447, 286};
     for (int i = 0; i < tam; i++) {
-        a[i] = auxvet[i];
+        a[i] = auxvet[i];	
+        
     }
 }
 
 //programa principal
 
 int main() {
-    int tam = 1000, i=0, j=0, flag=0, m=0;
+	double start, end, tempo;
+    double segundosTotal;
+    int tam = 1024, i=0, j=0, flag=0, m=0;
+    int logn = 10, n = 1 << logn;
     int *a;
     a = (int*) calloc(tam, sizeof (int));
-    retornaAleatorio(a, tam);
-    int up = 1;   // means sort in ascending order
-    BitonicSort(a, tam, true);
-    for (int j = 0; j < tam; j++) {
-        printf("%d ,", a[j]);
-    }
-
+    retornaAleatorio(a, n);
+    clock_t startTime = clock();
+    bitonicSort(a, logn,n);
+    segundosTotal = (clock() - startTime)/(double)(CLOCKS_PER_SEC);
+    //for (int j = 0; j < n; j++) {
+     //   printf("%d ,", a[j]);
+    //}
+    printf("%f s lib ctime\n", segundosTotal);
     return 0;
 }
-
-

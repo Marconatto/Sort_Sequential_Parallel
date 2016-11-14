@@ -68,16 +68,16 @@ do
 		esac
 	echo
 	echo "--Execucao java sequencial"
-	javac "${locaissequejav[$j]}.java" ; time java "${locaissequejav[$j]}"
+	javac "${locaissequejav[$j]}.java" ; time java "${locaissequejav[$j]}" | tee -a logtempo.log
 	echo
 	echo "--Execucao java paralelo"
-	java -jar /home/marconatto/OMP4J/omp4j-1.2.jar "${locaisparaljav[$j]}.java" ; time java "${locaisparaljav[$j]}"
+	java -jar /home/marconatto/OMP4J/omp4j-1.2.jar "${locaisparaljav[$j]}.java" ; time java "${locaisparaljav[$j]}" | tee -a logtempo.log
 	echo		
 	echo "--Execucao C++ sequencial"
-	g++ "${locaissequecpp[$j]}" -o saidaseqcpp ; time ./saidaseqcpp
+	g++ "${locaissequecpp[$j]}" -o saidaseqcpp ; time ./saidaseqcpp | tee -a logtempo.log
 	echo		
 	echo "--Execucao C++ paralelo"
-	g++ -fopenmp "${locaisparalcpp[$j]}" -o saidaparcpp ; time ./saidaparcpp
+	g++ -fopenmp "${locaisparalcpp[$j]}" -o saidaparcpp ; time ./saidaparcpp | tee -a logtempo.log
 	rm -r org
 	rm -r saidaseqcpp
 	rm -r saidaparcpp

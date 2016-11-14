@@ -15,7 +15,7 @@ public class Quick_sequencial {
         //	System.out.print(a[j]+",");
         //}
         tempo = (end - start);
-        System.out.print("\n" + tempo*1000 + " s\n");
+        System.out.print("\n" + tempo + " ms\n");
 
     }
 

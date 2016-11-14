@@ -38,7 +38,6 @@ public class Radix_sequencial{
                     if (j < n[i]) {
                         vector[c] = z[j][i];
                         c++;
-                        System.out.println(c);
                     } else {
                         break;
                     }

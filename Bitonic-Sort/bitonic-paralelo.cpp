@@ -1,28 +1,31 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <omp.h>
+#include <ctime>
+#include <cstdlib>
 
-void OddEvenSort(int *a, int N){
-    int t, i, j, metade, ultimoPar, ultimoImpar;
-    for(j=0;j<N;j++){
-        #pragma omp parallel for private(i, t)
-        for(i=0;i<N-1;i=i+2){
-            if(a[i] > a[i+1]){
-			t=a[i+1];
-		 	a[i+1]=a[i];
-		 	a[i]=t;
-            }
-        }
-        #pragma omp parallel for private(i, t)
-        for(i=1;i<N-2;i=i+2){
-            if(a[i] > a[i+1]){
-		t=a[i+1];
-	 	a[i+1]=a[i];
-	 	a[i]=t;
+void kernel(int *a, int p, int q, int tam) {
+        int d = 1 << (p-q);
+        #pragma omp for
+        for(int i=0;i<tam;i++) {
+        	#pragma omp private(i)
+            bool up = ((i >> p) & 2) == 0;
+            if (((i & d) == 0) && (a[i] > a[i | d]) == up) {
+                int t = a[i];
+                a[i] = a[i | d];
+                a[i | d] = t;
             }
         }
     }
-}
+
+void bitonicSort(int *a, int logn, int tam) {
+        for(int i=0;i<logn;i++) {
+        	#pragma private(j,i)
+            for(int j=0;j<=i;j++) {
+                kernel(a, i, j, tam);
+            }
+        }
+    }
 
 void retornaVetorContrario(int *a, int tam){
 	int aux=tam;
@@ -73,19 +76,28 @@ void retornaAleatorio(int *a, int tam){
 
 //programa principal
 int main (){
+
 	double start, end, tempo;
-	int tam=1000;
+	double segundosTotal;
+	int tam=1024;
 	int *a;
 	a= (int*) calloc(tam, sizeof(int));
-	retornaAleatorio(a, tam);	
-	start=omp_get_wtime();
-	OddEvenSort(a,tam);
-	end=omp_get_wtime();
-	for(int j=0; j<tam;j++){
-		printf("%d ,",a[j]);
-	}
+	int logn = 10, n = 1 << logn;
+	retornaAleatorio(a, n);
+	clock_t startTime = clock();
+    start = omp_get_wtime();
+    #pragma omp parallel shared(a)
+    {
+	bitonicSort(a, logn,n);
+    }
+    end = omp_get_wtime();
+    segundosTotal = (clock() - startTime)/(double)(CLOCKS_PER_SEC);
+    //for (int j = 0; j < n; j++) {
+    //    printf("%d ,", a[j]);
+    //}
 	tempo=end-start;
-	printf("\n%f",tempo);
+	printf("%f s lib ctime\n", segundosTotal);
+    printf("%f s lib openmp\n",tempo);
 
 return 0;
 }

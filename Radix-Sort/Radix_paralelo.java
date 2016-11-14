@@ -7,12 +7,12 @@ public class Radix_paralelo{
 		int a[]=new int[tam];	
 		retornaAleatorio(a, tam);
 		start=System.currentTimeMillis();
-		// omp parallel
+		// omp parallel public(a)
 		radixSort(a, tam); // aqui tem retorno do vetor !! verificar
 		end=System.currentTimeMillis();
-		for(int j=0; j<tam;j++){
-			System.out.print(a[j]+",");
-		}
+		//for(int j=0; j<tam;j++){
+		//	System.out.print(a[j]+",");
+		//}
 		tempo=(end-start);
 		System.out.print("\n"+tempo+" s\n");
 	}

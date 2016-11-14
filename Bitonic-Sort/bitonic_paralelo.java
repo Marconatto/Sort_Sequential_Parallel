@@ -7,7 +7,7 @@ public class bitonic_paralelo{
         int a[] = new int[n];
         retornaAleatorio(a,n);
         start=System.currentTimeMillis();
-        // omp parallel private(a)
+        // omp parallel public(a)
         {
         bitonicSort(a,logn);
     	}
@@ -20,10 +20,10 @@ public class bitonic_paralelo{
 
     public static void kernel(int[] a, final int p, final int q) {
         final int d = 1 << (p-q);
-        
+        // omp parallel for
         for(int i=0;i<a.length;i++) {
             boolean up = ((i >> p) & 2) == 0;
-
+            // omp parallel private(i)
             if ((i & d) == 0 && (a[i] > a[i | d]) == up) {
                 int t = a[i];
                 a[i] = a[i | d];
@@ -35,6 +35,7 @@ public class bitonic_paralelo{
     public static void bitonicSort(int[] a, final int tam) {
 
         for(int i=0;i<tam;i++) {
+        	// omp parallel private (j)
             for(int j=0;j<=i;j++) {
                 kernel(a, i, j);
             }
