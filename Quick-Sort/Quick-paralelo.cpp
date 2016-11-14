@@ -36,8 +36,8 @@ void quickSort(int *vetor, int inicio, int fim)
       quickSort(vetor, i, fim);
 }
 void retornaVetorContrario(int *a, int tam){
-	int aux=tam;
-	for(int i=0;i<=tam;i++){
+	int aux=tam-1;
+	for(int i=0;i<tam;i++){
 		a[i]=aux;
 		aux=aux-1;
 	}
@@ -83,16 +83,22 @@ void retornaAleatorio(int *a, int tam){
 }
 
 //programa principal
-int main (){
+int main (int numargs, char *arg[]){
 	double end=0, tempo=0;
 	double inicio=0;
 	double segundosTotal;
 	int tam=1000;
 	int *a;
 	a= (int*) calloc(tam, sizeof(int));
-	retornaAleatorio(a, tam);	
+	int escolha=atoi (arg[1]);
+	if(escolha==0){
+		retornaAleatorio(a, tam);
+	}else{
+		retornaVetorContrario(a,tam);
+	}
 	inicio=omp_get_wtime();
 	clock_t startTime = clock();
+	omp_set_num_threads(32);
 	#pragma omp parallel
     {
         quickSort(a,0,tam-1);

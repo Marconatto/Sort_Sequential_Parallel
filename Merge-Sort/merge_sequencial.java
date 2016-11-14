@@ -7,7 +7,14 @@ public class merge_sequencial {
         long start, end, tempo;
         int tam = 1000;
         int[] a = new int[tam];
-        retornaAleatorio(a, tam);
+        Scanner scan = new Scanner(System.in);
+        int escolha=0;
+        escolha=scan.nextInt();
+        if(escolha==0){
+            retornaAleatorio(a, tam);
+        }else{
+            retornaVetorContrario(a,tam);
+        }
         start = System.currentTimeMillis();
         mergeSort(a);
         end = System.currentTimeMillis();
@@ -56,7 +63,13 @@ public class merge_sequencial {
             a[rightEnd] = tmp[rightEnd];
         }
     }
-
+    public static void retornaVetorContrario(int[] a, int tam){
+        int aux=tam-1;
+        for(int i=0;i<tam;i++){
+            a[i]=aux;
+            aux=aux-1;
+        }
+    }
     public static void retornaAleatorio(int a[], int tam) {
         Integer auxvet[] = {629, 486, 29, 610, 80, 247, 100, 493, 497, 590, 657, 307, 611, 77, 823, 532, 615, 727, 675, 407, 748, 111,
             825, 443, 760, 678, 895, 549, 681, 71, 921, 952, 176, 66, 185, 926, 50, 546, 605, 215, 459, 36, 400, 408, 166, 404, 775, 627,
@@ -96,87 +109,3 @@ public class merge_sequencial {
         }
     }
 }
-
-
-/*
-import java.util.*;
-
-public class odd_even_sequencial {
-
-    public static void main(String[] args) {
-        long start, end, tempo;
-        int tam = 1000;
-        int[] a = new int[tam];
-        retornaAleatorio(a, tam);
-        start = System.currentTimeMillis();
-        OddEvenSort(a, tam);
-        end = System.currentTimeMillis();
-        //for(int j=0; j<tam;j++){
-        //	System.out.print(a[j]+",");
-        //}
-        tempo = (end - start);
-        System.out.print("\n" + tempo + " ms");
-
-    }
-
-    public static void merge(int X[], int n, int tmp[]) {
-        int i = 0;
-        int j = n / 2;
-        int ti = 0;
-
-        while (i < n / 2 && j < n) {
-            if (X[i] < X[j]) {
-                tmp[ti] = X[i];
-                ti++;
-                i++;
-            } else {
-                tmp[ti] = X[j];
-                ti++;
-                j++;
-            }
-        }
-        while (i < n / 2) {
-            /* finish up lower half *
-            tmp[ti] = X[i];
-            ti++;
-            i++;
-        }
-        while (j < n) {
-            /* finish up upper half *
-            tmp[ti] = X[j];
-            ti++;
-            j++;
-        }
-        X=tmp;
-        
-
-    } // end of merge()
-
-    public static void mergesort(int X[], int n, int tmp[])
-        {
-           if (n < 2) {
-            return;
-        }
-
-        mergesort(X, n / 2, tmp);
-
-        mergesort(X + (n / 2), n - (n / 2), tmp);
-
-
-        /* merge sorted halves into sorted list *
-        merge(X, n, tmp);
-    }
-
-
-    public static void retornaVetorContrario(int a[], int tam) {
-        int aux = tam;
-        for (int i = 0; i <= tam; i++) {
-            a[i] = aux;
-            aux = aux - 1;
-        }
-    }
-
-    
-
-}
- */

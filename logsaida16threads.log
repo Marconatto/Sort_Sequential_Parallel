@@ -1,0 +1,963 @@
+Iniciando testes!
+################################Repeticao aleatoria################################################################
+
+-------------------------Repeticao 1 de 10 -----------------------------------------------
+
+Execucao Quick Sort
+
+--Execucao java paralelo
+
+5 ms
+
+--Execucao C++ paralelo
+0.001172 s lib ctime
+0.000478 s lib openmp
+
+Execucao Radix Sort
+
+--Execucao java paralelo
+
+6 s
+
+--Execucao C++ paralelo
+0.006036 s lib ctime
+0.002790 s lib openmp
+
+Execucao Odd-Even Sort
+
+--Execucao java paralelo
+
+4501 ms
+
+--Execucao C++ paralelo
+0.058777 s lib ctime
+0.021226 s lib openmp
+
+Execucao Merge Sort
+
+--Execucao java paralelo
+
+14 ms
+
+--Execucao C++ paralelo
+0.000708 s lib ctime
+0.000328 s lib openmp
+
+Execucao Bitonic Sort
+
+--Execucao C++ paralelo
+0.002646 s lib ctime
+0.000992 s lib openmp
+
+-------------------------Repeticao 2 de 10 -----------------------------------------------
+
+Execucao Quick Sort
+
+--Execucao java paralelo
+
+12 ms
+
+--Execucao C++ paralelo
+0.001318 s lib ctime
+0.000442 s lib openmp
+
+Execucao Radix Sort
+
+--Execucao java paralelo
+
+6 s
+
+--Execucao C++ paralelo
+0.004757 s lib ctime
+0.002388 s lib openmp
+
+Execucao Odd-Even Sort
+
+--Execucao java paralelo
+
+4469 ms
+
+--Execucao C++ paralelo
+0.063029 s lib ctime
+0.020812 s lib openmp
+
+Execucao Merge Sort
+
+--Execucao java paralelo
+
+8 ms
+
+--Execucao C++ paralelo
+0.000564 s lib ctime
+0.000284 s lib openmp
+
+Execucao Bitonic Sort
+
+--Execucao C++ paralelo
+0.002683 s lib ctime
+0.001099 s lib openmp
+
+-------------------------Repeticao 3 de 10 -----------------------------------------------
+
+Execucao Quick Sort
+
+--Execucao java paralelo
+
+5 ms
+
+--Execucao C++ paralelo
+0.001219 s lib ctime
+0.000535 s lib openmp
+
+Execucao Radix Sort
+
+--Execucao java paralelo
+
+6 s
+
+--Execucao C++ paralelo
+0.004000 s lib ctime
+0.001770 s lib openmp
+
+Execucao Odd-Even Sort
+
+--Execucao java paralelo
+
+4492 ms
+
+--Execucao C++ paralelo
+0.054110 s lib ctime
+0.022827 s lib openmp
+
+Execucao Merge Sort
+
+--Execucao java paralelo
+
+10 ms
+
+--Execucao C++ paralelo
+0.000643 s lib ctime
+0.000326 s lib openmp
+
+Execucao Bitonic Sort
+
+--Execucao C++ paralelo
+0.003070 s lib ctime
+0.001312 s lib openmp
+
+-------------------------Repeticao 4 de 10 -----------------------------------------------
+
+Execucao Quick Sort
+
+--Execucao java paralelo
+
+5 ms
+
+--Execucao C++ paralelo
+0.001267 s lib ctime
+0.000471 s lib openmp
+
+Execucao Radix Sort
+
+--Execucao java paralelo
+
+6 s
+
+--Execucao C++ paralelo
+0.003871 s lib ctime
+0.001774 s lib openmp
+
+Execucao Odd-Even Sort
+
+--Execucao java paralelo
+
+4535 ms
+
+--Execucao C++ paralelo
+0.059772 s lib ctime
+0.019670 s lib openmp
+
+Execucao Merge Sort
+
+--Execucao java paralelo
+
+8 ms
+
+--Execucao C++ paralelo
+0.000516 s lib ctime
+0.000270 s lib openmp
+
+Execucao Bitonic Sort
+
+--Execucao C++ paralelo
+0.002748 s lib ctime
+0.001052 s lib openmp
+
+-------------------------Repeticao 5 de 10 -----------------------------------------------
+
+Execucao Quick Sort
+
+--Execucao java paralelo
+
+11 ms
+
+--Execucao C++ paralelo
+0.001351 s lib ctime
+0.000547 s lib openmp
+
+Execucao Radix Sort
+
+--Execucao java paralelo
+
+7 s
+
+--Execucao C++ paralelo
+0.003560 s lib ctime
+0.001467 s lib openmp
+
+Execucao Odd-Even Sort
+
+--Execucao java paralelo
+
+4457 ms
+
+--Execucao C++ paralelo
+0.060608 s lib ctime
+0.018716 s lib openmp
+
+Execucao Merge Sort
+
+--Execucao java paralelo
+
+7 ms
+
+--Execucao C++ paralelo
+0.000730 s lib ctime
+0.000330 s lib openmp
+
+Execucao Bitonic Sort
+
+--Execucao C++ paralelo
+0.002532 s lib ctime
+0.001070 s lib openmp
+
+-------------------------Repeticao 6 de 10 -----------------------------------------------
+
+Execucao Quick Sort
+
+--Execucao java paralelo
+
+5 ms
+
+--Execucao C++ paralelo
+0.001347 s lib ctime
+0.000531 s lib openmp
+
+Execucao Radix Sort
+
+--Execucao java paralelo
+
+7 s
+
+--Execucao C++ paralelo
+0.003991 s lib ctime
+0.001703 s lib openmp
+
+Execucao Odd-Even Sort
+
+--Execucao java paralelo
+
+4686 ms
+
+--Execucao C++ paralelo
+0.058127 s lib ctime
+0.023717 s lib openmp
+
+Execucao Merge Sort
+
+--Execucao java paralelo
+
+17 ms
+
+--Execucao C++ paralelo
+0.000632 s lib ctime
+0.000301 s lib openmp
+
+Execucao Bitonic Sort
+
+--Execucao C++ paralelo
+0.002772 s lib ctime
+0.001098 s lib openmp
+
+-------------------------Repeticao 7 de 10 -----------------------------------------------
+
+Execucao Quick Sort
+
+--Execucao java paralelo
+
+5 ms
+
+--Execucao C++ paralelo
+0.001242 s lib ctime
+0.000491 s lib openmp
+
+Execucao Radix Sort
+
+--Execucao java paralelo
+
+6 s
+
+--Execucao C++ paralelo
+0.003536 s lib ctime
+0.001403 s lib openmp
+
+Execucao Odd-Even Sort
+
+--Execucao java paralelo
+
+4415 ms
+
+--Execucao C++ paralelo
+0.054414 s lib ctime
+0.020162 s lib openmp
+
+Execucao Merge Sort
+
+--Execucao java paralelo
+
+11 ms
+
+--Execucao C++ paralelo
+0.000740 s lib ctime
+0.000337 s lib openmp
+
+Execucao Bitonic Sort
+
+--Execucao C++ paralelo
+0.002682 s lib ctime
+0.001011 s lib openmp
+
+-------------------------Repeticao 8 de 10 -----------------------------------------------
+
+Execucao Quick Sort
+
+--Execucao java paralelo
+
+5 ms
+
+--Execucao C++ paralelo
+0.001229 s lib ctime
+0.000511 s lib openmp
+
+Execucao Radix Sort
+
+--Execucao java paralelo
+
+7 s
+
+--Execucao C++ paralelo
+0.003444 s lib ctime
+0.001555 s lib openmp
+
+Execucao Odd-Even Sort
+
+--Execucao java paralelo
+
+4361 ms
+
+--Execucao C++ paralelo
+0.062150 s lib ctime
+0.020786 s lib openmp
+
+Execucao Merge Sort
+
+--Execucao java paralelo
+
+20 ms
+
+--Execucao C++ paralelo
+0.000665 s lib ctime
+0.000298 s lib openmp
+
+Execucao Bitonic Sort
+
+--Execucao C++ paralelo
+0.002004 s lib ctime
+0.000886 s lib openmp
+
+-------------------------Repeticao 9 de 10 -----------------------------------------------
+
+Execucao Quick Sort
+
+--Execucao java paralelo
+
+12 ms
+
+--Execucao C++ paralelo
+0.001623 s lib ctime
+0.000719 s lib openmp
+
+Execucao Radix Sort
+
+--Execucao java paralelo
+
+6 s
+
+--Execucao C++ paralelo
+0.003724 s lib ctime
+0.001669 s lib openmp
+
+Execucao Odd-Even Sort
+
+--Execucao java paralelo
+
+4522 ms
+
+--Execucao C++ paralelo
+0.062984 s lib ctime
+0.021080 s lib openmp
+
+Execucao Merge Sort
+
+--Execucao java paralelo
+
+12 ms
+
+--Execucao C++ paralelo
+0.000708 s lib ctime
+0.000323 s lib openmp
+
+Execucao Bitonic Sort
+
+--Execucao C++ paralelo
+0.002523 s lib ctime
+0.000949 s lib openmp
+
+-------------------------Repeticao 10 de 10 -----------------------------------------------
+
+Execucao Quick Sort
+
+--Execucao java paralelo
+
+6 ms
+
+--Execucao C++ paralelo
+0.001201 s lib ctime
+0.000581 s lib openmp
+
+Execucao Radix Sort
+
+--Execucao java paralelo
+
+6 s
+
+--Execucao C++ paralelo
+0.004129 s lib ctime
+0.002107 s lib openmp
+
+Execucao Odd-Even Sort
+
+--Execucao java paralelo
+
+4598 ms
+
+--Execucao C++ paralelo
+0.061908 s lib ctime
+0.019171 s lib openmp
+
+Execucao Merge Sort
+
+--Execucao java paralelo
+
+11 ms
+
+--Execucao C++ paralelo
+0.000708 s lib ctime
+0.000325 s lib openmp
+
+Execucao Bitonic Sort
+
+--Execucao C++ paralelo
+0.002731 s lib ctime
+0.001070 s lib openmp
+################################Repeticao inversa #################################################################
+
+-------------------------Repeticao 1 de 10 -----------------------------------------------
+
+Execucao Quick Sort
+
+--Execucao java paralelo
+
+12 ms
+
+--Execucao C++ paralelo
+0.001169 s lib ctime
+0.000553 s lib openmp
+
+Execucao Radix Sort
+
+--Execucao java paralelo
+
+6 s
+
+--Execucao C++ paralelo
+0.009689 s lib ctime
+0.006781 s lib openmp
+
+Execucao Odd-Even Sort
+
+--Execucao java paralelo
+
+4305 ms
+
+--Execucao C++ paralelo
+0.057637 s lib ctime
+0.020638 s lib openmp
+
+Execucao Merge Sort
+
+--Execucao java paralelo
+
+8 ms
+
+--Execucao C++ paralelo
+0.000636 s lib ctime
+0.000280 s lib openmp
+
+Execucao Bitonic Sort
+
+--Execucao C++ paralelo
+0.002506 s lib ctime
+0.000949 s lib openmp
+
+-------------------------Repeticao 2 de 10 -----------------------------------------------
+
+Execucao Quick Sort
+
+--Execucao java paralelo
+
+6 ms
+
+--Execucao C++ paralelo
+0.000850 s lib ctime
+0.000353 s lib openmp
+
+Execucao Radix Sort
+
+--Execucao java paralelo
+
+6 s
+
+--Execucao C++ paralelo
+0.003727 s lib ctime
+0.001670 s lib openmp
+
+Execucao Odd-Even Sort
+
+--Execucao java paralelo
+
+4545 ms
+
+--Execucao C++ paralelo
+0.067548 s lib ctime
+0.022892 s lib openmp
+
+Execucao Merge Sort
+
+--Execucao java paralelo
+
+16 ms
+
+--Execucao C++ paralelo
+0.000486 s lib ctime
+0.000234 s lib openmp
+
+Execucao Bitonic Sort
+
+--Execucao C++ paralelo
+0.002293 s lib ctime
+0.000964 s lib openmp
+
+-------------------------Repeticao 3 de 10 -----------------------------------------------
+
+Execucao Quick Sort
+
+--Execucao java paralelo
+
+5 ms
+
+--Execucao C++ paralelo
+0.000751 s lib ctime
+0.000366 s lib openmp
+
+Execucao Radix Sort
+
+--Execucao java paralelo
+
+6 s
+
+--Execucao C++ paralelo
+0.003782 s lib ctime
+0.001725 s lib openmp
+
+Execucao Odd-Even Sort
+
+--Execucao java paralelo
+
+4318 ms
+
+--Execucao C++ paralelo
+0.055668 s lib ctime
+0.021663 s lib openmp
+
+Execucao Merge Sort
+
+--Execucao java paralelo
+
+20 ms
+
+--Execucao C++ paralelo
+0.000704 s lib ctime
+0.000280 s lib openmp
+
+Execucao Bitonic Sort
+
+--Execucao C++ paralelo
+0.002714 s lib ctime
+0.001023 s lib openmp
+
+-------------------------Repeticao 4 de 10 -----------------------------------------------
+
+Execucao Quick Sort
+
+--Execucao java paralelo
+
+5 ms
+
+--Execucao C++ paralelo
+0.000859 s lib ctime
+0.000348 s lib openmp
+
+Execucao Radix Sort
+
+--Execucao java paralelo
+
+6 s
+
+--Execucao C++ paralelo
+0.003734 s lib ctime
+0.001736 s lib openmp
+
+Execucao Odd-Even Sort
+
+--Execucao java paralelo
+
+4333 ms
+
+--Execucao C++ paralelo
+0.068153 s lib ctime
+0.020070 s lib openmp
+
+Execucao Merge Sort
+
+--Execucao java paralelo
+
+23 ms
+
+--Execucao C++ paralelo
+0.000621 s lib ctime
+0.000358 s lib openmp
+
+Execucao Bitonic Sort
+
+--Execucao C++ paralelo
+0.002991 s lib ctime
+0.001145 s lib openmp
+
+-------------------------Repeticao 5 de 10 -----------------------------------------------
+
+Execucao Quick Sort
+
+--Execucao java paralelo
+
+5 ms
+
+--Execucao C++ paralelo
+0.000988 s lib ctime
+0.000377 s lib openmp
+
+Execucao Radix Sort
+
+--Execucao java paralelo
+
+6 s
+
+--Execucao C++ paralelo
+0.004074 s lib ctime
+0.002138 s lib openmp
+
+Execucao Odd-Even Sort
+
+--Execucao java paralelo
+
+4590 ms
+
+--Execucao C++ paralelo
+0.067142 s lib ctime
+0.021252 s lib openmp
+
+Execucao Merge Sort
+
+--Execucao java paralelo
+
+16 ms
+
+--Execucao C++ paralelo
+0.000871 s lib ctime
+0.000339 s lib openmp
+
+Execucao Bitonic Sort
+
+--Execucao C++ paralelo
+0.002696 s lib ctime
+0.001048 s lib openmp
+
+-------------------------Repeticao 6 de 10 -----------------------------------------------
+
+Execucao Quick Sort
+
+--Execucao java paralelo
+
+5 ms
+
+--Execucao C++ paralelo
+0.000839 s lib ctime
+0.000370 s lib openmp
+
+Execucao Radix Sort
+
+--Execucao java paralelo
+
+6 s
+
+--Execucao C++ paralelo
+0.003552 s lib ctime
+0.001512 s lib openmp
+
+Execucao Odd-Even Sort
+
+--Execucao java paralelo
+
+4369 ms
+
+--Execucao C++ paralelo
+0.063698 s lib ctime
+0.019706 s lib openmp
+
+Execucao Merge Sort
+
+--Execucao java paralelo
+
+13 ms
+
+--Execucao C++ paralelo
+0.000539 s lib ctime
+0.000253 s lib openmp
+
+Execucao Bitonic Sort
+
+--Execucao C++ paralelo
+0.002497 s lib ctime
+0.000920 s lib openmp
+
+-------------------------Repeticao 7 de 10 -----------------------------------------------
+
+Execucao Quick Sort
+
+--Execucao java paralelo
+
+9 ms
+
+--Execucao C++ paralelo
+0.000943 s lib ctime
+0.000367 s lib openmp
+
+Execucao Radix Sort
+
+--Execucao java paralelo
+
+7 s
+
+--Execucao C++ paralelo
+0.003820 s lib ctime
+0.001838 s lib openmp
+
+Execucao Odd-Even Sort
+
+--Execucao java paralelo
+
+4554 ms
+
+--Execucao C++ paralelo
+0.067908 s lib ctime
+0.021379 s lib openmp
+
+Execucao Merge Sort
+
+--Execucao java paralelo
+
+8 ms
+
+--Execucao C++ paralelo
+0.000602 s lib ctime
+0.000251 s lib openmp
+
+Execucao Bitonic Sort
+
+--Execucao C++ paralelo
+0.002649 s lib ctime
+0.001003 s lib openmp
+
+-------------------------Repeticao 8 de 10 -----------------------------------------------
+
+Execucao Quick Sort
+
+--Execucao java paralelo
+
+5 ms
+
+--Execucao C++ paralelo
+0.001102 s lib ctime
+0.000420 s lib openmp
+
+Execucao Radix Sort
+
+--Execucao java paralelo
+
+6 s
+
+--Execucao C++ paralelo
+0.004043 s lib ctime
+0.002064 s lib openmp
+
+Execucao Odd-Even Sort
+
+--Execucao java paralelo
+
+4678 ms
+
+--Execucao C++ paralelo
+0.067437 s lib ctime
+0.022739 s lib openmp
+
+Execucao Merge Sort
+
+--Execucao java paralelo
+
+7 ms
+
+--Execucao C++ paralelo
+0.000577 s lib ctime
+0.000241 s lib openmp
+
+Execucao Bitonic Sort
+
+--Execucao C++ paralelo
+0.002650 s lib ctime
+0.000995 s lib openmp
+
+-------------------------Repeticao 9 de 10 -----------------------------------------------
+
+Execucao Quick Sort
+
+--Execucao java paralelo
+
+5 ms
+
+--Execucao C++ paralelo
+0.001055 s lib ctime
+0.000410 s lib openmp
+
+Execucao Radix Sort
+
+--Execucao java paralelo
+
+6 s
+
+--Execucao C++ paralelo
+0.003685 s lib ctime
+0.001736 s lib openmp
+
+Execucao Odd-Even Sort
+
+--Execucao java paralelo
+
+4375 ms
+
+--Execucao C++ paralelo
+0.067524 s lib ctime
+0.022420 s lib openmp
+
+Execucao Merge Sort
+
+--Execucao java paralelo
+
+8 ms
+
+--Execucao C++ paralelo
+0.000543 s lib ctime
+0.000238 s lib openmp
+
+Execucao Bitonic Sort
+
+--Execucao C++ paralelo
+0.003117 s lib ctime
+0.001176 s lib openmp
+
+-------------------------Repeticao 10 de 10 -----------------------------------------------
+
+Execucao Quick Sort
+
+--Execucao java paralelo
+
+12 ms
+
+--Execucao C++ paralelo
+0.001051 s lib ctime
+0.000427 s lib openmp
+
+Execucao Radix Sort
+
+--Execucao java paralelo
+
+6 s
+
+--Execucao C++ paralelo
+0.003831 s lib ctime
+0.001711 s lib openmp
+
+Execucao Odd-Even Sort
+
+--Execucao java paralelo
+
+4515 ms
+
+--Execucao C++ paralelo
+0.062537 s lib ctime
+0.022267 s lib openmp
+
+Execucao Merge Sort
+
+--Execucao java paralelo
+
+13 ms
+
+--Execucao C++ paralelo
+0.000644 s lib ctime
+0.000283 s lib openmp
+
+Execucao Bitonic Sort
+
+--Execucao C++ paralelo
+0.002428 s lib ctime
+0.000889 s lib openmp

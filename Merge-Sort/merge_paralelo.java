@@ -6,9 +6,16 @@ public class merge_paralelo {
         long start, end, tempo;
         int tam = 1000;
         int a[]= new int[tam];
-        retornaAleatorio(a, tam);
+        Scanner scan = new Scanner(System.in);
+        int escolha=0;
+        escolha=scan.nextInt();
+        if(escolha==0){
+            retornaAleatorio(a, tam);
+        }else{
+            retornaVetorContrario(a,tam);
+        }
         start = System.currentTimeMillis();
-        // omp parallel private(a)
+        // omp parallel private(a) threadNum(32)
         {
             mergeSort(a);
         }
@@ -58,7 +65,13 @@ public class merge_paralelo {
             a[rightEnd] = tmp[rightEnd];
         }
     }
-
+    public static void retornaVetorContrario(int[] a, int tam){
+        int aux=tam-1;
+        for(int i=0;i<tam;i++){
+            a[i]=aux;
+            aux=aux-1;
+        }
+    }
     public static void retornaAleatorio(int a[], int tam) {
         Integer auxvet[] = {629, 486, 29, 610, 80, 247, 100, 493, 497, 590, 657, 307, 611, 77, 823, 532, 615, 727, 675, 407, 748, 111,
             825, 443, 760, 678, 895, 549, 681, 71, 921, 952, 176, 66, 185, 926, 50, 546, 605, 215, 459, 36, 400, 408, 166, 404, 775, 627,

@@ -5,9 +5,16 @@ public class Radix_paralelo{
 		long start, end, tempo;
 		int tam=1000;
 		int a[]=new int[tam];	
-		retornaAleatorio(a, tam);
+		Scanner scan = new Scanner(System.in);
+		int escolha=0;
+		escolha=scan.nextInt();
+		if(escolha==0){
+			retornaAleatorio(a, tam);
+		}else{
+			retornaVetorContrario(a,tam);
+		}
 		start=System.currentTimeMillis();
-		// omp parallel public(a)
+		// omp parallel public(a) threadNum(32)
 		radixSort(a, tam); // aqui tem retorno do vetor !! verificar
 		end=System.currentTimeMillis();
 		//for(int j=0; j<tam;j++){
@@ -46,9 +53,9 @@ public class Radix_paralelo{
         return a;
     }
 	
-	public static void retornaVetorContrario(int a[], int tam){
-		int aux=tam;
-		for(int i=0;i<=tam;i++){
+	public static void retornaVetorContrario(int[] a, int tam){
+		int aux=tam-1;
+		for(int i=0;i<tam;i++){
 			a[i]=aux;
 			aux=aux-1;
 		}

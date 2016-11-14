@@ -28,8 +28,8 @@ void bitonicSort(int *a, int logn, int tam) {
     }
 
 void retornaVetorContrario(int *a, int tam){
-	int aux=tam;
-	for(int i=0;i<=tam;i++){
+	int aux=tam-1;
+	for(int i=0;i<tam;i++){
 		a[i]=aux;
 		aux=aux-1;
 	}
@@ -75,17 +75,22 @@ void retornaAleatorio(int *a, int tam){
 }
 
 //programa principal
-int main (){
-
+int main (int numargs, char *arg[]){
 	double start, end, tempo;
 	double segundosTotal;
 	int tam=1024;
 	int *a;
 	a= (int*) calloc(tam, sizeof(int));
 	int logn = 10, n = 1 << logn;
-	retornaAleatorio(a, n);
+	int escolha=atoi (arg[1]);
+	if(escolha==0){
+		retornaAleatorio(a, n);
+	}else{
+		retornaVetorContrario(a,n);
+	}
 	clock_t startTime = clock();
     start = omp_get_wtime();
+    omp_set_num_threads(32);
     #pragma omp parallel shared(a)
     {
 	bitonicSort(a, logn,n);

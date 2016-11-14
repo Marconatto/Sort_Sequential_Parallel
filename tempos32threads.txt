@@ -1,0 +1,764 @@
+real	0m0.065s
+user	0m0.068s
+sys	0m0.016s
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+
+real	0m0.071s
+user	0m0.076s
+sys	0m0.008s
+
+real	0m0.009s
+user	0m0.000s
+sys	0m0.008s
+
+real	0m8.438s
+user	0m12.840s
+sys	0m8.420s
+
+real	0m0.040s
+user	0m0.104s
+sys	0m0.004s
+
+real	0m0.076s
+user	0m0.088s
+sys	0m0.008s
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+
+real	0m0.003s
+user	0m0.000s
+sys	0m0.004s
+rm: não foi possível remover 'org': Arquivo ou diretório não encontrado
+rm: não foi possível remover '*.class': Arquivo ou diretório não encontrado
+
+real	0m0.066s
+user	0m0.064s
+sys	0m0.020s
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+
+real	0m0.071s
+user	0m0.080s
+sys	0m0.004s
+
+real	0m0.004s
+user	0m0.004s
+sys	0m0.000s
+
+real	0m8.639s
+user	0m12.776s
+sys	0m8.648s
+
+real	0m0.036s
+user	0m0.100s
+sys	0m0.008s
+
+real	0m0.081s
+user	0m0.092s
+sys	0m0.012s
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+
+real	0m0.003s
+user	0m0.004s
+sys	0m0.000s
+rm: não foi possível remover 'org': Arquivo ou diretório não encontrado
+rm: não foi possível remover '*.class': Arquivo ou diretório não encontrado
+
+real	0m0.070s
+user	0m0.072s
+sys	0m0.008s
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+
+real	0m0.077s
+user	0m0.092s
+sys	0m0.000s
+
+real	0m0.004s
+user	0m0.004s
+sys	0m0.000s
+
+real	0m8.591s
+user	0m12.152s
+sys	0m8.940s
+
+real	0m0.038s
+user	0m0.108s
+sys	0m0.000s
+
+real	0m0.082s
+user	0m0.088s
+sys	0m0.012s
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+
+real	0m0.003s
+user	0m0.000s
+sys	0m0.004s
+rm: não foi possível remover 'org': Arquivo ou diretório não encontrado
+rm: não foi possível remover '*.class': Arquivo ou diretório não encontrado
+
+real	0m0.065s
+user	0m0.080s
+sys	0m0.000s
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+
+real	0m0.072s
+user	0m0.072s
+sys	0m0.012s
+
+real	0m0.009s
+user	0m0.000s
+sys	0m0.012s
+
+real	0m8.482s
+user	0m12.508s
+sys	0m8.540s
+
+real	0m0.034s
+user	0m0.100s
+sys	0m0.012s
+
+real	0m0.081s
+user	0m0.100s
+sys	0m0.004s
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+
+real	0m0.002s
+user	0m0.004s
+sys	0m0.000s
+rm: não foi possível remover 'org': Arquivo ou diretório não encontrado
+rm: não foi possível remover '*.class': Arquivo ou diretório não encontrado
+
+real	0m0.070s
+user	0m0.072s
+sys	0m0.008s
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+
+real	0m0.079s
+user	0m0.072s
+sys	0m0.020s
+
+real	0m0.004s
+user	0m0.004s
+sys	0m0.000s
+
+real	0m8.388s
+user	0m12.036s
+sys	0m8.860s
+
+real	0m0.037s
+user	0m0.092s
+sys	0m0.008s
+
+real	0m0.088s
+user	0m0.104s
+sys	0m0.008s
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.004s
+rm: não foi possível remover 'org': Arquivo ou diretório não encontrado
+rm: não foi possível remover '*.class': Arquivo ou diretório não encontrado
+
+real	0m0.071s
+user	0m0.068s
+sys	0m0.012s
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+
+real	0m0.072s
+user	0m0.076s
+sys	0m0.008s
+
+real	0m0.004s
+user	0m0.000s
+sys	0m0.004s
+
+real	0m8.466s
+user	0m12.376s
+sys	0m8.592s
+
+real	0m0.036s
+user	0m0.084s
+sys	0m0.024s
+
+real	0m0.082s
+user	0m0.092s
+sys	0m0.004s
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.008s
+rm: não foi possível remover 'org': Arquivo ou diretório não encontrado
+rm: não foi possível remover '*.class': Arquivo ou diretório não encontrado
+
+real	0m0.071s
+user	0m0.076s
+sys	0m0.004s
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+
+real	0m0.077s
+user	0m0.068s
+sys	0m0.020s
+
+real	0m0.005s
+user	0m0.008s
+sys	0m0.000s
+
+real	0m8.409s
+user	0m12.972s
+sys	0m8.304s
+
+real	0m0.035s
+user	0m0.092s
+sys	0m0.012s
+
+real	0m0.074s
+user	0m0.088s
+sys	0m0.008s
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+
+real	0m0.002s
+user	0m0.004s
+sys	0m0.000s
+rm: não foi possível remover 'org': Arquivo ou diretório não encontrado
+rm: não foi possível remover '*.class': Arquivo ou diretório não encontrado
+
+real	0m0.067s
+user	0m0.072s
+sys	0m0.012s
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+
+real	0m0.073s
+user	0m0.076s
+sys	0m0.008s
+
+real	0m0.004s
+user	0m0.004s
+sys	0m0.000s
+
+real	0m8.628s
+user	0m12.236s
+sys	0m8.920s
+
+real	0m0.035s
+user	0m0.100s
+sys	0m0.008s
+
+real	0m0.083s
+user	0m0.088s
+sys	0m0.016s
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+
+real	0m0.003s
+user	0m0.000s
+sys	0m0.004s
+rm: não foi possível remover 'org': Arquivo ou diretório não encontrado
+rm: não foi possível remover '*.class': Arquivo ou diretório não encontrado
+
+real	0m0.070s
+user	0m0.068s
+sys	0m0.012s
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+
+real	0m0.073s
+user	0m0.076s
+sys	0m0.008s
+
+real	0m0.004s
+user	0m0.000s
+sys	0m0.004s
+
+real	0m8.401s
+user	0m12.296s
+sys	0m8.652s
+
+real	0m0.036s
+user	0m0.104s
+sys	0m0.008s
+
+real	0m0.080s
+user	0m0.088s
+sys	0m0.008s
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+
+real	0m0.002s
+user	0m0.004s
+sys	0m0.000s
+rm: não foi possível remover 'org': Arquivo ou diretório não encontrado
+rm: não foi possível remover '*.class': Arquivo ou diretório não encontrado
+
+real	0m0.067s
+user	0m0.080s
+sys	0m0.004s
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+
+real	0m0.077s
+user	0m0.084s
+sys	0m0.004s
+
+real	0m0.004s
+user	0m0.004s
+sys	0m0.000s
+
+real	0m8.563s
+user	0m12.856s
+sys	0m8.608s
+
+real	0m0.036s
+user	0m0.096s
+sys	0m0.008s
+
+real	0m0.076s
+user	0m0.088s
+sys	0m0.008s
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.004s
+rm: não foi possível remover 'org': Arquivo ou diretório não encontrado
+rm: não foi possível remover '*.class': Arquivo ou diretório não encontrado
+
+real	0m0.070s
+user	0m0.068s
+sys	0m0.012s
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+
+real	0m0.072s
+user	0m0.068s
+sys	0m0.016s
+
+real	0m0.004s
+user	0m0.000s
+sys	0m0.004s
+
+real	0m8.578s
+user	0m12.492s
+sys	0m8.696s
+
+real	0m0.036s
+user	0m0.104s
+sys	0m0.008s
+
+real	0m0.081s
+user	0m0.084s
+sys	0m0.016s
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+
+real	0m0.002s
+user	0m0.004s
+sys	0m0.000s
+rm: não foi possível remover 'org': Arquivo ou diretório não encontrado
+rm: não foi possível remover '*.class': Arquivo ou diretório não encontrado
+
+real	0m0.066s
+user	0m0.080s
+sys	0m0.008s
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+
+real	0m0.073s
+user	0m0.064s
+sys	0m0.020s
+
+real	0m0.004s
+user	0m0.004s
+sys	0m0.000s
+
+real	0m8.594s
+user	0m12.728s
+sys	0m8.568s
+
+real	0m0.037s
+user	0m0.096s
+sys	0m0.012s
+
+real	0m0.078s
+user	0m0.088s
+sys	0m0.004s
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+
+real	0m0.002s
+user	0m0.008s
+sys	0m0.000s
+rm: não foi possível remover 'org': Arquivo ou diretório não encontrado
+rm: não foi possível remover '*.class': Arquivo ou diretório não encontrado
+
+real	0m0.067s
+user	0m0.084s
+sys	0m0.000s
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+
+real	0m0.072s
+user	0m0.072s
+sys	0m0.012s
+
+real	0m0.004s
+user	0m0.004s
+sys	0m0.000s
+
+real	0m8.824s
+user	0m12.896s
+sys	0m8.912s
+
+real	0m0.037s
+user	0m0.096s
+sys	0m0.012s
+
+real	0m0.075s
+user	0m0.080s
+sys	0m0.016s
+
+real	0m0.002s
+user	0m0.004s
+sys	0m0.000s
+
+real	0m0.002s
+user	0m0.004s
+sys	0m0.000s
+rm: não foi possível remover 'org': Arquivo ou diretório não encontrado
+rm: não foi possível remover '*.class': Arquivo ou diretório não encontrado
+
+real	0m0.070s
+user	0m0.076s
+sys	0m0.000s
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+
+real	0m0.072s
+user	0m0.080s
+sys	0m0.004s
+
+real	0m0.004s
+user	0m0.000s
+sys	0m0.004s
+
+real	0m8.606s
+user	0m13.060s
+sys	0m8.412s
+
+real	0m0.035s
+user	0m0.088s
+sys	0m0.020s
+
+real	0m0.079s
+user	0m0.088s
+sys	0m0.012s
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+
+real	0m0.002s
+user	0m0.004s
+sys	0m0.000s
+rm: não foi possível remover 'org': Arquivo ou diretório não encontrado
+rm: não foi possível remover '*.class': Arquivo ou diretório não encontrado
+
+real	0m0.073s
+user	0m0.072s
+sys	0m0.012s
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+
+real	0m0.080s
+user	0m0.088s
+sys	0m0.004s
+
+real	0m0.005s
+user	0m0.000s
+sys	0m0.008s
+
+real	0m8.676s
+user	0m12.648s
+sys	0m8.800s
+
+real	0m0.038s
+user	0m0.108s
+sys	0m0.008s
+
+real	0m0.077s
+user	0m0.100s
+sys	0m0.000s
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.004s
+rm: não foi possível remover 'org': Arquivo ou diretório não encontrado
+rm: não foi possível remover '*.class': Arquivo ou diretório não encontrado
+
+real	0m0.067s
+user	0m0.076s
+sys	0m0.012s
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+
+real	0m0.078s
+user	0m0.084s
+sys	0m0.008s
+
+real	0m0.004s
+user	0m0.004s
+sys	0m0.000s
+
+real	0m8.636s
+user	0m12.180s
+sys	0m9.092s
+
+real	0m0.042s
+user	0m0.104s
+sys	0m0.004s
+
+real	0m0.076s
+user	0m0.084s
+sys	0m0.012s
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+
+real	0m0.002s
+user	0m0.004s
+sys	0m0.000s
+rm: não foi possível remover 'org': Arquivo ou diretório não encontrado
+rm: não foi possível remover '*.class': Arquivo ou diretório não encontrado
+
+real	0m0.075s
+user	0m0.080s
+sys	0m0.004s
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+
+real	0m0.080s
+user	0m0.088s
+sys	0m0.004s
+
+real	0m0.007s
+user	0m0.004s
+sys	0m0.004s
+
+real	0m8.512s
+user	0m12.560s
+sys	0m8.664s
+
+real	0m0.033s
+user	0m0.088s
+sys	0m0.024s
+
+real	0m0.083s
+user	0m0.100s
+sys	0m0.008s
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+
+real	0m0.002s
+user	0m0.004s
+sys	0m0.000s
+rm: não foi possível remover 'org': Arquivo ou diretório não encontrado
+rm: não foi possível remover '*.class': Arquivo ou diretório não encontrado
+
+real	0m0.070s
+user	0m0.076s
+sys	0m0.004s
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+
+real	0m0.071s
+user	0m0.084s
+sys	0m0.000s
+
+real	0m0.006s
+user	0m0.004s
+sys	0m0.000s
+
+real	0m8.806s
+user	0m12.564s
+sys	0m8.908s
+
+real	0m0.038s
+user	0m0.112s
+sys	0m0.000s
+
+real	0m0.081s
+user	0m0.092s
+sys	0m0.008s
+
+real	0m0.001s
+user	0m0.000s
+sys	0m0.000s
+
+real	0m0.002s
+user	0m0.008s
+sys	0m0.000s
+rm: não foi possível remover 'org': Arquivo ou diretório não encontrado
+rm: não foi possível remover '*.class': Arquivo ou diretório não encontrado
+
+real	0m0.074s
+user	0m0.080s
+sys	0m0.004s
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+
+real	0m0.072s
+user	0m0.064s
+sys	0m0.020s
+
+real	0m0.006s
+user	0m0.008s
+sys	0m0.000s
+
+real	0m8.489s
+user	0m12.912s
+sys	0m8.372s
+
+real	0m0.038s
+user	0m0.104s
+sys	0m0.000s
+
+real	0m0.083s
+user	0m0.100s
+sys	0m0.008s
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+
+real	0m0.003s
+user	0m0.004s
+sys	0m0.000s
+rm: não foi possível remover 'org': Arquivo ou diretório não encontrado
+rm: não foi possível remover '*.class': Arquivo ou diretório não encontrado
+
+real	0m0.070s
+user	0m0.076s
+sys	0m0.004s
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+
+real	0m0.077s
+user	0m0.072s
+sys	0m0.016s
+
+real	0m0.004s
+user	0m0.000s
+sys	0m0.004s
+
+real	0m8.871s
+user	0m12.460s
+sys	0m9.152s
+
+real	0m0.041s
+user	0m0.112s
+sys	0m0.000s
+
+real	0m0.076s
+user	0m0.084s
+sys	0m0.012s
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.000s
+
+real	0m0.002s
+user	0m0.000s
+sys	0m0.004s
+rm: não foi possível remover 'org': Arquivo ou diretório não encontrado
+rm: não foi possível remover '*.class': Arquivo ou diretório não encontrado
+
+real	6m33.537s
+user	14m0.500s
+sys	3m5.684s
+

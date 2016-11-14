@@ -41,8 +41,8 @@ void radixSort(int *a, int TAMVET) {
 }
 
 void retornaVetorContrario(int *a, int tam){
-	int aux=tam;
-	for(int i=0;i<=tam;i++){
+	int aux=tam-1;
+	for(int i=0;i<tam;i++){
 		a[i]=aux;
 		aux=aux-1;
 	}
@@ -88,12 +88,17 @@ void retornaAleatorio(int *a, int tam){
 }
 
 //programa principal
-int main (){
+int main (int numargs, char *arg[]){
 	double segundosTotal;
 	int tam=1000;
 	int *a;
-	a= (int*) calloc(tam, sizeof(int));
-	retornaAleatorio(a, tam);
+	a= (int*) calloc(tam, sizeof(int));;
+	int escolha=atoi (arg[1]);
+	if(escolha==0){
+		retornaAleatorio(a, tam);
+	}else{
+		retornaVetorContrario(a,tam);
+	}
 	clock_t startTime = clock();	
 	radixSort(a,tam);
 	//for(int j=0; j<tam;j++){

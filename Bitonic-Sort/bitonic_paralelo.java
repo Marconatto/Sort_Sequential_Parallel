@@ -5,9 +5,16 @@ public class bitonic_paralelo{
 		long start, end, tempo;
         final int logn = 10, n = 1 << logn;
         int a[] = new int[n];
-        retornaAleatorio(a,n);
+        Scanner scan = new Scanner(System.in);
+		int escolha=0;
+		//escolha=scan.nextInt();
+		if(escolha==0){
+			retornaAleatorio(a, n);
+		}else{
+			retornaVetorContrario(a,n);
+		}
         start=System.currentTimeMillis();
-        // omp parallel public(a)
+        // omp parallel threadNum(32)
         {
         bitonicSort(a,logn);
     	}
@@ -33,9 +40,7 @@ public class bitonic_paralelo{
     }
 
     public static void bitonicSort(int[] a, final int tam) {
-
         for(int i=0;i<tam;i++) {
-        	// omp parallel private (j)
             for(int j=0;j<=i;j++) {
                 kernel(a, i, j);
             }
@@ -43,8 +48,8 @@ public class bitonic_paralelo{
     }
 	
 	public static void retornaVetorContrario(int[] a, int tam){
-		int aux=tam;
-		for(int i=0;i<=tam;i++){
+		int aux=tam-1;
+		for(int i=0;i<tam;i++){
 			a[i]=aux;
 			aux=aux-1;
 		}
