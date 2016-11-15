@@ -16,7 +16,7 @@ public class bitonic_sequencial{
         start=System.currentTimeMillis();
         bitonicSort(a0,logn);
         end=System.currentTimeMillis();
-        //for(int k=0;k<a0.length;k++) System.out.print(a0[k] + " ");
+        for(int k=0;k<a0.length;k++) System.out.print(a0[k] + " ");
         //System.out.println();
         tempo=(end-start);
         System.out.print("\n"+tempo+" ms\n");

@@ -45,7 +45,7 @@ do
 	do
 		echo 
 		echo "-------------------------Repeticao $i de 10 -----------------------------------------------"
-		for j in 0 1 2 3 4
+		for j in 4
 		do
 			case $j in
 			"0")
@@ -79,28 +79,28 @@ do
 			#then
 			#	echo "--Execucao java sequencial"
 			#	javac "${locaissequejav[$j]}.java" ; time echo "$k" | java "${locaissequejav[$j]}"
-			#echo
+			#	echo
 			#fi		
-			if test $j -ne 4
-			then
+			##if test $j -ne 4
+			##then
 				echo "--Execucao java paralelo"
 				java -jar /home/marconatto/OMP4J/omp4j-1.2.jar "${locaisparaljav[$j]}.java" ; time echo "$k" | java "${locaisparaljav[$j]}"
 				echo
-			fi	
+			#fi	
 			#if test $k -eq 0
 			#then	
 			#	echo "--Execucao C++ sequencial"
 			#	g++ "${locaissequecpp[$j]}" -o saidaseqcpp ; time ./saidaseqcpp $k
 			#	echo	
 			#fi	
-			echo "--Execucao C++ paralelo"
-			g++ -fopenmp "${locaisparalcpp[$j]}" -o saidaparcpp ; time ./saidaparcpp $k
+			#echo "--Execucao C++ paralelo"
+			#g++ -fopenmp "${locaisparalcpp[$j]}" -o saidaparcpp ; time ./saidaparcpp $k
 			rm -r org
 			#if test $k -eq 0
 			#then	
 			#	rm -r saidaseqcpp
 			#fi
-			rm -r saidaparcpp
+			#rm -r saidaparcpp
 			rm *.class
 			cd ..
 		done

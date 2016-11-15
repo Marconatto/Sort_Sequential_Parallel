@@ -7,7 +7,7 @@ public class bitonic_paralelo{
         int a[] = new int[n];
         Scanner scan = new Scanner(System.in);
 		int escolha=0;
-		//escolha=scan.nextInt();
+		escolha=scan.nextInt();
 		if(escolha==0){
 			retornaAleatorio(a, n);
 		}else{
@@ -19,7 +19,7 @@ public class bitonic_paralelo{
         bitonicSort(a,logn);
     	}
         end=System.currentTimeMillis();
-        //for(int k=0;k<a.length;k++) System.out.print(a[k] + " ");
+        for(int k=0;k<a.length;k++) System.out.print(a[k] + " ");
         //System.out.println();
     	tempo=(end-start);
 		System.out.print("\n"+tempo+" ms");
@@ -41,6 +41,7 @@ public class bitonic_paralelo{
 
     public static void bitonicSort(int[] a, final int tam) {
         for(int i=0;i<tam;i++) {
+        	// omp parallel private(j)
             for(int j=0;j<=i;j++) {
                 kernel(a, i, j);
             }

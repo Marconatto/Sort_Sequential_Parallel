@@ -1,0 +1,512 @@
+Iniciando testes!
+################################Repeticao inversa #################################################################
+
+-------------------------Repeticao 1 de 10 -----------------------------------------------
+
+Execucao Quick Sort
+
+--Execucao java sequencial
+
+0 ms
+
+--Execucao C++ sequencial
+0.000020 s lib ctime
+
+
+Execucao Radix Sort
+
+--Execucao java sequencial
+
+1000 s
+--Execucao C++ sequencial
+0.000154 s lib ctime
+
+
+Execucao Odd-Even Sort
+
+--Execucao java sequencial
+
+5 ms
+
+--Execucao C++ sequencial
+0.002481 s lib ctime
+
+
+Execucao Merge Sort
+
+--Execucao java sequencial
+
+0 ms
+
+--Execucao C++ sequencial
+0.000039 s lib ctime
+
+
+Execucao Bitonic Sort
+
+--Execucao java sequencial
+
+1 ms
+
+--Execucao C++ sequencial
+0.000237 s lib ctime
+
+
+-------------------------Repeticao 2 de 10 -----------------------------------------------
+
+Execucao Quick Sort
+
+--Execucao java sequencial
+
+1 ms
+
+--Execucao C++ sequencial
+0.000020 s lib ctime
+
+
+Execucao Radix Sort
+
+--Execucao java sequencial
+
+1000 s
+--Execucao C++ sequencial
+0.000114 s lib ctime
+
+
+Execucao Odd-Even Sort
+
+--Execucao java sequencial
+
+5 ms
+
+--Execucao C++ sequencial
+0.002479 s lib ctime
+
+
+Execucao Merge Sort
+
+--Execucao java sequencial
+
+1 ms
+
+--Execucao C++ sequencial
+0.000038 s lib ctime
+
+
+Execucao Bitonic Sort
+
+--Execucao java sequencial
+
+2 ms
+
+--Execucao C++ sequencial
+0.000187 s lib ctime
+
+
+-------------------------Repeticao 3 de 10 -----------------------------------------------
+
+Execucao Quick Sort
+
+--Execucao java sequencial
+
+0 ms
+
+--Execucao C++ sequencial
+0.000020 s lib ctime
+
+
+Execucao Radix Sort
+
+--Execucao java sequencial
+
+0 s
+--Execucao C++ sequencial
+0.000116 s lib ctime
+
+
+Execucao Odd-Even Sort
+
+--Execucao java sequencial
+
+5 ms
+
+--Execucao C++ sequencial
+0.002516 s lib ctime
+
+
+Execucao Merge Sort
+
+--Execucao java sequencial
+
+1 ms
+
+--Execucao C++ sequencial
+0.000040 s lib ctime
+
+
+Execucao Bitonic Sort
+
+--Execucao java sequencial
+
+2 ms
+
+--Execucao C++ sequencial
+0.000187 s lib ctime
+
+
+-------------------------Repeticao 4 de 10 -----------------------------------------------
+
+Execucao Quick Sort
+
+--Execucao java sequencial
+
+0 ms
+
+--Execucao C++ sequencial
+0.000019 s lib ctime
+
+
+Execucao Radix Sort
+
+--Execucao java sequencial
+
+1000 s
+--Execucao C++ sequencial
+0.000117 s lib ctime
+
+
+Execucao Odd-Even Sort
+
+--Execucao java sequencial
+
+5 ms
+
+--Execucao C++ sequencial
+0.002508 s lib ctime
+
+
+Execucao Merge Sort
+
+--Execucao java sequencial
+
+1 ms
+
+--Execucao C++ sequencial
+0.000039 s lib ctime
+
+
+Execucao Bitonic Sort
+
+--Execucao java sequencial
+
+1 ms
+
+--Execucao C++ sequencial
+0.000187 s lib ctime
+
+
+-------------------------Repeticao 5 de 10 -----------------------------------------------
+
+Execucao Quick Sort
+
+--Execucao java sequencial
+
+0 ms
+
+--Execucao C++ sequencial
+0.000020 s lib ctime
+
+
+Execucao Radix Sort
+
+--Execucao java sequencial
+
+1000 s
+--Execucao C++ sequencial
+0.000117 s lib ctime
+
+
+Execucao Odd-Even Sort
+
+--Execucao java sequencial
+
+5 ms
+
+--Execucao C++ sequencial
+0.002507 s lib ctime
+
+
+Execucao Merge Sort
+
+--Execucao java sequencial
+
+0 ms
+
+--Execucao C++ sequencial
+0.000040 s lib ctime
+
+
+Execucao Bitonic Sort
+
+--Execucao java sequencial
+
+2 ms
+
+--Execucao C++ sequencial
+0.000186 s lib ctime
+
+
+-------------------------Repeticao 6 de 10 -----------------------------------------------
+
+Execucao Quick Sort
+
+--Execucao java sequencial
+
+1 ms
+
+--Execucao C++ sequencial
+0.000019 s lib ctime
+
+
+Execucao Radix Sort
+
+--Execucao java sequencial
+
+0 s
+--Execucao C++ sequencial
+0.000115 s lib ctime
+
+
+Execucao Odd-Even Sort
+
+--Execucao java sequencial
+
+5 ms
+
+--Execucao C++ sequencial
+0.002629 s lib ctime
+
+
+Execucao Merge Sort
+
+--Execucao java sequencial
+
+0 ms
+
+--Execucao C++ sequencial
+0.000039 s lib ctime
+
+
+Execucao Bitonic Sort
+
+--Execucao java sequencial
+
+2 ms
+
+--Execucao C++ sequencial
+0.000188 s lib ctime
+
+
+-------------------------Repeticao 7 de 10 -----------------------------------------------
+
+Execucao Quick Sort
+
+--Execucao java sequencial
+
+0 ms
+
+--Execucao C++ sequencial
+0.000019 s lib ctime
+
+
+Execucao Radix Sort
+
+--Execucao java sequencial
+
+0 s
+--Execucao C++ sequencial
+0.000118 s lib ctime
+
+
+Execucao Odd-Even Sort
+
+--Execucao java sequencial
+
+5 ms
+
+--Execucao C++ sequencial
+0.002483 s lib ctime
+
+
+Execucao Merge Sort
+
+--Execucao java sequencial
+
+0 ms
+
+--Execucao C++ sequencial
+0.000040 s lib ctime
+
+
+Execucao Bitonic Sort
+
+--Execucao java sequencial
+
+2 ms
+
+--Execucao C++ sequencial
+0.000186 s lib ctime
+
+
+-------------------------Repeticao 8 de 10 -----------------------------------------------
+
+Execucao Quick Sort
+
+--Execucao java sequencial
+
+0 ms
+
+--Execucao C++ sequencial
+0.000019 s lib ctime
+
+
+Execucao Radix Sort
+
+--Execucao java sequencial
+
+1000 s
+--Execucao C++ sequencial
+0.000115 s lib ctime
+
+
+Execucao Odd-Even Sort
+
+--Execucao java sequencial
+
+5 ms
+
+--Execucao C++ sequencial
+0.002483 s lib ctime
+
+
+Execucao Merge Sort
+
+--Execucao java sequencial
+
+0 ms
+
+--Execucao C++ sequencial
+0.000040 s lib ctime
+
+
+Execucao Bitonic Sort
+
+--Execucao java sequencial
+
+2 ms
+
+--Execucao C++ sequencial
+0.000187 s lib ctime
+
+
+-------------------------Repeticao 9 de 10 -----------------------------------------------
+
+Execucao Quick Sort
+
+--Execucao java sequencial
+
+0 ms
+
+--Execucao C++ sequencial
+0.000019 s lib ctime
+
+
+Execucao Radix Sort
+
+--Execucao java sequencial
+
+0 s
+--Execucao C++ sequencial
+0.000114 s lib ctime
+
+
+Execucao Odd-Even Sort
+
+--Execucao java sequencial
+
+5 ms
+
+--Execucao C++ sequencial
+0.002524 s lib ctime
+
+
+Execucao Merge Sort
+
+--Execucao java sequencial
+
+0 ms
+
+--Execucao C++ sequencial
+0.000040 s lib ctime
+
+
+Execucao Bitonic Sort
+
+--Execucao java sequencial
+
+2 ms
+
+--Execucao C++ sequencial
+0.000187 s lib ctime
+
+
+-------------------------Repeticao 10 de 10 -----------------------------------------------
+
+Execucao Quick Sort
+
+--Execucao java sequencial
+
+0 ms
+
+--Execucao C++ sequencial
+0.000020 s lib ctime
+
+
+Execucao Radix Sort
+
+--Execucao java sequencial
+
+1000 s
+--Execucao C++ sequencial
+0.000116 s lib ctime
+
+
+Execucao Odd-Even Sort
+
+--Execucao java sequencial
+
+5 ms
+
+--Execucao C++ sequencial
+0.002474 s lib ctime
+
+
+Execucao Merge Sort
+
+--Execucao java sequencial
+
+1 ms
+
+--Execucao C++ sequencial
+0.000040 s lib ctime
+
+
+Execucao Bitonic Sort
+
+--Execucao java sequencial
+
+2 ms
+
+--Execucao C++ sequencial
+0.000186 s lib ctime
+
